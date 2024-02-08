@@ -1,0 +1,1150 @@
+/********* book cards **************/
+.books {
+  .card {
+    border: 0;
+    width: 21%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 5px;
+    @include mobile {
+      width: 70%;
+      margin-bottom: 3rem;
+
+      &:nth-last-child(-n+1) {
+        margin-bottom: 0;
+      }
+    }
+
+    .card-img-top {
+      border: 1px solid #D8D8D8;
+      box-shadow: 0 1px 6px 0 rgba(0,0,0,0.07);
+      padding: 2rem;
+      @include mobile {
+        padding: 1rem;
+      }
+    }
+
+    .card-body {
+      padding: 0 0.5rem;
+
+      .book-details {
+        .book-name {
+          &:hover {
+            text-decoration: none;
+          }
+
+          h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #000000;
+            letter-spacing: 0.02rem;
+            line-height: 1.3rem;
+            max-width: 90%;
+            @include mobile {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .author {
+          h5 {
+            color: #D82813;
+            font-weight: 400;
+            font-size: 0.9rem;
+            letter-spacing: 0.02rem;
+            line-height: 1.25rem;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+
+        .price {
+          font-size: 0.88rem;
+          color: $grey;
+          letter-spacing: 0.02rem;
+          line-height: 1.13rem;
+          font-weight: 500;
+          @include mobile {
+            font-size: 0.78rem;
+          }
+        }
+
+        .stars {
+          img {
+            max-width: 1rem;
+            @include mobile {
+              max-width: 0.8rem;
+            }
+          }
+        }
+
+        .buy-btn {
+          max-width: 50%;
+          margin: 0 auto;
+          border: 1px solid #F88822;
+          border-radius: 2em;
+          height: 30px;
+          color: #F88822;
+          font-size: 0.75rem;
+          letter-spacing: 0.02rem;
+          line-height: 1rem;
+          @include mobile {
+            max-width: 70%;
+          }
+
+          &:hover {
+            text-decoration: none;
+            color: white;
+            background: #F88822;
+            border: 1px solid #F88822;
+          }
+        }
+      }
+    }
+
+    .edition {
+      position: absolute;
+      max-width: 8rem;
+      width: 8rem;
+      height: 30px;
+      top: 3%;
+      @include mobile {
+        max-width: 6rem;
+        width: 6rem;
+        top: 2%;
+        height: 25px;
+      }
+
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+      }
+
+      h4 {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-30%, -50%);
+        font-size: 0.9rem;
+        color: #ffffff;
+        letter-spacing: 0.3px;
+        line-height: 21px;
+        font-weight: 500;
+        margin-bottom: 0;
+        @include mobile {
+          font-size: 0.6rem;
+          left: 10%;
+          transform: translate(-10%, -50%);
+        }
+      }
+    }
+
+    .seller {
+      @extend .edition;
+      max-width: 6rem;
+      width: 6rem;
+    }
+  }
+}
+
+.add-review {
+  border: 1px solid $orange;
+  border-radius: 2rem;
+
+  &:hover {
+    background: $orange;
+    text-decoration: none;
+
+    h4 {
+      color: $white;
+    }
+  }
+
+  h4 {
+    font-family: $font-futura;
+    font-size: 0.75rem;
+    letter-spacing: 0.43px;
+    color: $orange;
+    margin-bottom: 0;
+    width: 6rem;
+    height: 30px;
+  }
+}
+
+.registration {
+  font-family: $font-futura;
+  @include mobile {
+    z-index: 9999;
+  }
+  @include tablet {
+    z-index: 9999;
+  }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .modal-dialog {
+    width: 100%;
+    max-width: 100%;
+    @include mobile {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+    @include tablet {
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1366px) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .modal-content {
+      padding: 3rem;
+      height: 100vh;
+      border: 0;
+      @include mobile {
+        padding: 1rem;
+        height: 100vh;
+        overflow: scroll;
+        border: none;
+      }
+      @include tablet {
+        padding: 1rem;
+        height: 100vh;
+        overflow: scroll;
+        border: none;
+      }
+    }
+  }
+  /*form styles*/
+  .msform {
+    text-align: center;
+    position: relative;
+
+    .close-btn {
+      background: #EFEEEE;
+      border-radius: 2rem;
+      height: 30px;
+      width: 30px;
+
+      &:focus {
+        outline: 0;
+      }
+
+      .fa-times {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: relative;
+    @include mobile {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+    }
+    @include tablet {
+      width: 100%;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+
+  .msform fieldset:not(:first-of-type) {
+    display: none;
+  }
+  /*inputs*/
+  .msform input,
+  .msform textarea {
+    padding: 5px 0;
+    border-radius: 0;
+    //  margin-bottom: 1.5rem;
+    width: 90%;
+    max-width: 90%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: $grey;
+    font-weight: 600;
+    letter-spacing: 0.34px;
+    @include mobile {
+      margin: 0 auto;
+    }
+    @include tablet {
+      margin: 0 auto 2rem;
+    }
+  }
+
+  .msform input:focus,
+  .msform textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-bottom: 1px solid $orange !important;
+    outline-width: 0;
+    // transition: All 0.5s ease-in;
+    // -webkit-transition: All 0.5s ease-in;
+    // -moz-transition: All 0.5s ease-in;
+    // -o-transition: All 0.5s ease-in;
+  }
+  /*buttons*/
+  .msform .action-button {
+    width: 100px;
+    background: #ee0979;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+  }
+
+  .msform .action-button:focus,
+  .msform .action-button:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+  }
+
+  .msform .action-button-previous {
+    width: 100px;
+    background: #C5C5F1;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+  }
+
+  .msform .action-button-previous:focus,
+  .msform .action-button-previous:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+  }
+
+  .card-content {
+    @include mobile {
+      font-size: 1.25rem;
+      line-height: 26px;
+    }
+    @include tablet {
+      font-size: 1.25rem;
+      line-height: 26px;
+    }
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 2rem;
+    @include mobile {
+      margin-bottom: 3rem;
+    }
+
+    .form-control {
+      border-radius: 0;
+      //color: $font;
+      &:focus {
+        border-radius: 0;
+        border-color: inherit;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    .form-control-placeholder {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      transition: all 200ms;
+      outline: none;
+      color: #8A8A8A;
+      font-weight: 500;
+      font-size: 0.875rem;
+      @include mobile {
+        left: 1rem;
+      }
+      @include tablet {
+        left: 5.5rem;
+      }
+
+      &:focus {
+        color: $orange;
+        //  transform: translate3d(0, -130%, 0);
+      }
+    }
+
+    .contact-feilds {
+      border: none;
+      border-bottom: 1px solid #E3EAF2;
+      outline: none;
+      color: $grey;
+      font-weight: 500;
+      letter-spacing: 0.34px;
+      line-height: 21px;
+      background: transparent;
+      box-shadow: none;
+      padding: 0.5rem 0;
+      max-width: 75%;
+      width: 75%;
+      @include mobile {
+        max-width: 90%;
+        width: 90%;
+        padding: 0.5rem 2rem 0.5rem 0;
+      }
+      @include tablet {
+        padding: 0.5rem 2rem 0.5rem 0;
+      }
+    }
+
+    .form-control:focus + .form-control-placeholder,
+    .form-control:valid + .form-control-placeholder {
+      font-size: 75%;
+      transform: translate3d(0, -130%, 0);
+      opacity: 1;
+      color: $orange;
+    }
+  }
+
+  .check-container {
+    text-align: left;
+    margin-bottom: 0;
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+    color: #8A8A8A;
+    @include mobile {
+      left: 1rem;
+    }
+    @include tablet {
+      left: 2rem;
+    }
+  }
+  /* Hide the browser's default checkbox */
+  .check-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0%, 12%);
+    height: 18px;
+    width: 18px;
+    border: 1px solid $orange;
+    border-radius: 2px;
+    @include mobile {
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+    @include tablet {
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%);
+    }
+  }
+  /* When the checkbox is checked, add a blue background */
+  .check-container input:checked ~ .checkmark {
+    background-color: $orange;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the checkmark when checked */
+  .check-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* Style the checkmark/indicator */
+  .check-container .checkmark:after {
+    left: 5px;
+    top: 0;
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .remember-me {
+    @include tablet {
+      left: 5.5rem;
+      width: 90%;
+    }
+  }
+
+  .submit-cta {
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    border: none;
+
+    &:hover {
+      background: #e47816;
+    }
+
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .des-resend {
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .mob-resend {
+    display: none;
+    @include mobile {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .sign-google {
+    width: 17.5rem;
+    max-width: 17.5rem;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+    border-radius: 2rem;
+    height: 50px;
+    @include mobile {
+      width: 90%;
+      max-width: 90%;
+    }
+
+    &:hover {
+      background: #4267B2;
+
+      h2 {
+        color: #fff;
+      }
+    }
+
+    h2 {
+      font-family: $font-roboto;
+      color: rgba(0,0,0,0.54);
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.22px;
+      margin-bottom: 0;
+    }
+  }
+
+  .sign-fb {
+    @extend .sign-google;
+    background: #4267B2;
+
+    &:hover {
+      background: #fff;
+      box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
+
+      h2 {
+        color: rgba(0,0,0,0.54);
+      }
+
+      .fa-facebook {
+        color: #4267B2;
+      }
+    }
+
+    h2 {
+      color: white;
+    }
+
+    .fa-facebook {
+      color: white;
+    }
+  }
+
+  .eye {
+    max-width: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 9rem;
+    @include mobile {
+      right: 1rem;
+    }
+    @include tablet {
+      right: 6rem;
+    }
+  }
+
+  .eye-sign-in {
+    @extend .eye;
+    right: 7rem;
+    @include mobile {
+      right: 1rem;
+    }
+    @include tablet {
+      right: 6rem;
+    }
+  }
+
+  .label-email {
+    margin-left: 4rem;
+    @include mobile {
+      margin-left: 0;
+    }
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  .tool-tip {
+    position: absolute;
+    right: 4rem;
+    top: 0.2rem;
+    background: transparent;
+    @include mobile {
+      right: -2rem;
+    }
+    @include tablet {
+      right: 3rem;
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+
+    &:hover {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+
+    .dropdown-toggle {
+      background: transparent;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover {
+        i {
+          color: #8B8B8B;
+        }
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      i {
+        color: #D2D5DC;
+      }
+    }
+
+    .dropdown-menu {
+      padding: 1rem;
+      @include mobile {
+        position: absolute !important;
+        left: -11rem !important;
+        top: -8rem !important;
+        transform: none !important;
+      }
+      @include tablet {
+        position: absolute !important;
+        left: -11rem !important;
+        top: -8rem !important;
+        transform: none !important;
+      }
+
+      .must-have {
+        color: $grey;
+        font-size: 0.875rem;
+        font-weight: 600;
+        letter-spacing: 0.29px;
+        margin-bottom: 0.5rem;
+      }
+
+      ul {
+        padding: 0 1rem;
+
+        li {
+          list-style-type: disc;
+          font-size: 12px;
+          color: #8A8A8A;
+          letter-spacing: 0.25px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .fs_title {
+    color: #000000;
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    text-align: left;
+    @include mobile {
+      text-align: center;
+    }
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  .customize {
+    width: 98% !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+
+    .selectwrapper {
+      border-radius: 2rem;
+      display: inline-block;
+      overflow: hidden; // background: #cccccc;
+      border: 1px solid $orange;
+      height: 30px;
+      padding: 0 0.5rem;
+      @include mobile {
+        margin: 0 auto 2rem;
+      }
+      @include tablet {
+        margin: 0 auto 2rem;
+      }
+
+
+      &:hover {
+        input::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      }
+
+      &:focus {
+        input::-webkit-calendar-picker-indicator {
+          display: none;
+        }
+      }
+
+      select {
+        border: none;
+        height: 30px;
+        -webkit-appearance: none;
+        padding: 0 0.5rem;
+        width: 10rem;
+
+
+      }
+
+      .fa-angle-down {
+        position: absolute;
+        top: 0.5rem;
+        right: 1rem;
+        pointer-events: none;
+
+      }
+    }
+
+    .state-list {
+      border: 0;
+      width: 100%;
+      max-width: 100%;
+      cursor: pointer;
+
+
+    }
+
+    &::placeholder {
+      color: $grey;
+      font-weight: 400;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .des-profession {
+      display: flex;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .mob-profession {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+
+      .dropdown-toggle {
+        background: transparent;
+
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+
+      .dropdown-menu {
+        margin-top: 1px;
+
+        .dropdown-item {
+          border-left: 4px solid transparent;
+        }
+      }
+    }
+
+    .pro {
+      min-width: 20%;
+      max-width: 20%;
+      margin-bottom: 2rem;
+
+      &:nth-last-child(-n+4) {
+        margin-bottom: 0;
+      }
+
+      .check-container {
+        color: #6A6A6A;
+        font-size: 1.125rem;
+        letter-spacing: 0.3px;
+        font-weight: 400;
+      }
+    }
+
+    .other-search {
+      margin-bottom: 0 !important;
+      border-radius: 2rem !important;
+      border: 1px solid #E3EAF2;
+      background: #FAFAFA;
+      box-shadow: inset 0 1px 5px 0 rgba(236,236,236,0.50);
+      height: 30px;
+      width: 12rem !important;
+      max-width: 12rem !important;
+      margin-left: 1rem;
+      padding: 0 1rem !important;
+      border-bottom: none;
+
+      &:focus {
+        border: 1px solid $orange;
+        background: #FFFFF9;
+      }
+      @include mobile {
+        margin-top: 0.5rem !important;
+        margin-left: 1rem !important;
+      }
+      @include tablet {
+        margin-top: 0.5rem !important;
+        margin-left: 1rem !important;
+      }
+    }
+
+    .customize-cards {
+      @include mobile {
+        margin-bottom: 2rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      @include tablet {
+        margin-bottom: 2rem;
+        width: 50%;
+
+        &:nth-last-child(-n+2) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.07);
+      border: none;
+      height: 100%;
+
+      .taxtaion-img {
+        height: 10rem;
+        @include mobile {
+          height: 7rem;
+        }
+
+        img {
+          max-width: 6rem;
+          width: 6rem;
+          margin-top: 3rem;
+          @include mobile {
+            margin-top: 1rem;
+          }
+        }
+      }
+
+      .card-body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 0 3rem;
+
+        .card-title {
+          font-family: $font-futura;
+          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 0.6px;
+          line-height: 31px;
+          color: $grey;
+          @include mobile {
+            font-size: 1.25rem;
+          }
+        }
+
+        .card-text {
+          display: flex;
+          flex: 2 2 auto;
+          font-family: $font-faustina;
+          font-size: 1rem;
+          font-weight: 400;
+          letter-spacing: 0.3px;
+          max-width: 80%;
+          text-align: center;
+          color: $grey;
+          margin-bottom: 2rem;
+        }
+
+        .taxation-btn {
+          color: white;
+          border-radius: 2em;
+          width: 72%;
+          max-width: 72%;
+          font-size: 14px;
+          letter-spacing: 0.78px;
+          line-height: 18px;
+          font-family: $font-futura;
+          height: 50px;
+          font-weight: bold;
+          @include mobile {
+            width: 70%;
+            max-width: 70%;
+            font-size: 12px;
+          }
+        }
+
+        .green {
+          background: $green;
+
+          &:hover {
+            background: white;
+            color: $green;
+            border: 1px solid $green;
+          }
+        }
+
+        .blue {
+          background: $blue;
+
+          &:hover {
+            background: white;
+            color: $blue;
+            border: 1px solid $blue;
+          }
+        }
+
+        .magenta {
+          background: $magenta;
+
+          &:hover {
+            background: white;
+            color: $magenta;
+            border: 1px solid $magenta;
+          }
+        }
+
+        .purple {
+          background: $purple;
+
+          &:hover {
+            background: white;
+            color: $purple;
+            border: 1px solid $purple;
+          }
+        }
+      }
+    }
+
+    .skip {
+      a {
+        color: $grey;
+        font-size: 1rem;
+        letter-spacing: 0.4px;
+
+        &:hover {
+          color: $grey;
+        }
+      }
+    }
+  }
+  // }
+  /*progressbar*/
+  .progress-tab {
+    overflow: hidden;
+    counter-reset: step;
+    max-width: 30rem;
+    width: 30rem;
+    @include mobile {
+      padding: 0 1rem;
+    }
+  }
+
+  .progress-tab li {
+    list-style-type: none;
+    color: $grey;
+    font-size: 1rem;
+    font-weight: 400;
+    width: 33.33%;
+    float: left;
+    position: relative;
+    letter-spacing: 0.34px;
+  }
+
+  .progress-tab li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 24px;
+    height: 24px;
+    line-height: 26px;
+    display: block;
+    font-size: 1rem;
+    color: $grey;
+    background: white;
+    border: 1px solid #979797;
+    border-radius: 2rem;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*progressbar connectors*/
+  .progress-tab li:after {
+    content: '';
+    width: 70%;
+    height: 1px;
+    background: #979797;
+    position: absolute;
+    left: -35%;
+    top: 12px;
+    z-index: 1;
+    /*put it behind the numbers*/
+  }
+
+  .progress-tab li:first-child:after {
+    /*connector not needed before the first step*/
+    content: none;
+  }
+  /*marking active/completed steps green*/
+  /*The number of the step and the connector before it = green*/
+  .progress-tab li.active:after,
+  .progress-tab li.active:before {
+    background: $orange;
+    border: 1px solid $orange;
+    color: white;
+  }
+  /* Not relevant to this form */
+  .dme_link {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .dme_link a {
+    background: #FFF;
+    font-weight: bold;
+    color: #ee0979;
+    border: 0 none;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 5px 25px;
+    font-size: 12px;
+  }
+
+  .dme_link a:focus,
+  .dme_link a:hover {
+    background: #C5C5F1;
+    text-decoration: none;
+  }
+  
+  // code for sign-up datalist
+  .select2-selection__arrow {
+    display: none !important;
+  }
+
+  .select2-selection--single {
+    border: none !important;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .select2-selection__clear {
+    display: none !important;
+  }
+
+  .select2-container {
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .select2-selection__rendered {
+    display: flex !important;
+  }
+
+  .select2-search__field {
+    border-color: $orange !important;
+
+    &:focus {
+      outline: none !important;
+    }
+  }
+
+  .select2-dropdown--below {
+    border-color: $orange !important;
+  }
+}

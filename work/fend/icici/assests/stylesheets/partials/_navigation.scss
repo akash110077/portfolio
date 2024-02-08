@@ -1,0 +1,529 @@
+.wrapper {
+  background: white;
+  box-shadow: 0 4px 5px rgba(102,102,102,0.8);
+  -webkit-box-shadow: 0 4px 5px rgba(102,102,102,0.8);
+
+  .head {
+    height: 5rem;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+
+    .navbar-brand {
+      padding: 0 5rem;
+
+      img {
+        width: 12rem;
+      }
+    }
+  }
+
+  header {
+    background-color: $orange;
+    width: 100%;
+    margin: 0 auto;
+    @include mobile {
+      background-color: white;
+    }
+    @include tablet {
+      background-color: white;
+    }
+
+    .desktop-nav {
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+      @include mobile {
+        display: flex;
+      }
+      @include tablet {
+        display: flex;
+      }
+
+      .home-btn {
+        font-size: 1.75rem;
+        color: $orange;
+        padding: 0.25rem 0.75rem;
+        background-color: transparent;
+        border: 1px solid transparent;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .main-nav {
+      padding: 0;
+      @include mobile {
+        height: 100%;
+      }
+      @include tablet {
+        height: 100%;
+      }
+
+      .mobile-btn {
+        display: none;
+        @include mobile {
+          display: block;
+        }
+        @include tablet {
+          display: block;
+        }
+
+        &:focus {
+          @include mobile {
+            outline: none;
+          }
+          @include tablet {
+            outline: none;
+          }
+        }
+      }
+
+      .nav-link {
+        padding: 0;
+      }
+
+      .updated-header {
+        width: 100%;
+        max-width: 1100px;
+        // height: 40px;
+        margin: 0 auto;
+        @include mobile {
+          // height: auto;
+        }
+
+        .menu {
+          // max-width: 870px;
+          margin-left: -50px;
+          float: left;
+          padding: 0;
+          margin: 0;
+          height: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          display: flex;
+          justify-content: space-between;
+          @include mobile {
+            justify-content: flex-start;
+            height: 102vh;
+            overflow: scroll;
+            background: $orange;
+            width: 100%;
+            border-top: 1px solid #ffffff;
+          }
+          @include tablet {
+            height: 100%;
+            overflow: visible;
+            background: $orange;
+            width: 100%;
+            border-top: 1px solid #ffffff;
+          }
+
+          .search-mobile {
+            display: none;
+            @include mobile {
+              display: block;
+            }
+            @include tablet {
+              display: block;
+            }
+          }
+
+          li {
+            padding: 10px 8px !important;
+            // padding: 6px 11px 7px 10px !important;
+            width: auto;
+            float: left;
+            display: inline-block;
+            font-family: Arial,Helvetica,sans-serif;
+            font-size: 16px;
+            color: #FFF;
+            margin: 0 2px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include mobile {
+              height: auto;
+              border-bottom: 1px solid #ffffff;
+              justify-content: flex-start;
+              margin: 0;
+            }
+            @include tablet {
+              height: auto;
+              border-bottom: 1px solid #ffffff;
+              justify-content: flex-start;
+              margin: 0;
+            }
+
+            &:first-child {
+              @include mobile {}
+            }
+
+            a {
+              font-family: Arial,Helvetica,sans-serif;
+              font-size: 14px;
+              color: #FFF;
+              text-decoration: none;
+
+              &:hover {
+                color: $blue;
+              }
+              @include mobile {
+                margin-left: 1rem;
+              }
+              @include tablet {
+                margin-left: 1rem;
+              }
+            }
+
+            &:hover {
+              @include mobile {
+                background-color: #FFA117 !important;
+              }
+              @include tablet {
+                background-color: #FFA117 !important;
+              }
+
+              a {
+                color: $blue;
+              }
+            }
+
+            &:active {
+              @include mobile {
+                background-color: #FFA117 !important;
+              }
+              @include tablet {
+                background-color: #FFA117 !important;
+              }
+
+              a {
+                color: $blue;
+              }
+            }
+
+            &:focus {
+              @include mobile {
+                background-color: #FFA117 !important;
+              }
+              @include tablet {
+                background-color: #FFA117 !important;
+              }
+
+              a {
+                color: $blue;
+              }
+            }
+          }
+
+          li:nth-child(12) {
+            background: url("img/help-navbar.png") 0 9px no-repeat;
+            width: 20px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 4px 0 -3px !important;
+            text-indent: 16px;
+            background-size: contain;
+            @include mobile {
+              width: 100%;
+              background-image: None;
+            }
+            @include tablet {
+              width: 100%;
+              background-image: None;
+              border-bottom: none;
+            }
+
+            &:hover {
+              @include mobile {
+                background-color: #FFA117;
+              }
+              @include tablet {
+                background-color: #FFA117;
+              }
+
+              a {
+                color: $blue;
+              }
+            }
+          }
+
+          li:nth-child(11) {
+            background: url("../../img/dealsandmore-navbar.png") 0 9px no-repeat;
+            width: 150px;
+            height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 4px 0 3px;
+            text-indent: 16px;
+            background-size: 19px;
+            @include mobile {
+              width: 100%;
+              background-image: None;
+              margin: 0;
+            }
+            @include tablet {
+              width: 100%;
+              background-image: None;
+              margin: 0;
+            }
+
+            &:hover {
+              @include mobile {
+                background-color: #FFA117;
+              }
+              @include tablet {
+                background-color: #FFA117;
+              }
+
+              a {
+                color: $blue;
+              }
+            }
+          }
+
+          li:nth-child(11) a {
+            border-right: 1px solid #f0b567;
+            padding-right: 15px !important;
+            @include mobile {
+              border-right: none;
+              padding: 0;
+              display: flex;
+              justify-content: flex-start;
+              margin-left: -2px;
+              padding-bottom: 2rem;
+            }
+            @include tablet {
+              border-right: none;
+              padding: 0;
+              display: flex;
+              justify-content: flex-start;
+              margin-left: -2px;
+              padding-bottom: 2rem;
+            }
+          }
+
+          li:nth-child(12) a {
+            border-right: 1px solid #f0b567;
+            padding-right: 60px !important;
+            @include mobile {
+              border-right: none;
+              padding: 0;
+              display: flex;
+              justify-content: flex-start;
+              margin-left: 2px;
+              padding-bottom: 2rem;
+            }
+            @include tablet {
+              border-right: none;
+              padding: 0;
+              display: flex;
+              justify-content: flex-start;
+              margin-left: 2px;
+              padding-bottom: 2rem;
+            }
+          }
+
+          .selected {
+            background: url("../../img/selectionarrow-navbar.png") no-repeat top center;
+            background-size: 15px;
+            @include mobile {
+              background-position: 50px 0 !important;
+            }
+            @include tablet {
+              background-position: 50px 0 !important;
+            }
+          }
+        }
+
+        .SearcContainer {
+          width: 230px;
+          margin: 0;
+          height: 32px;
+          float: right;
+          background-color: #FFF;
+          @include mobile {
+            width: 100%;
+            margin: 0;
+            position: absolute;
+          }
+          @include tablet {
+            width: 100%;
+            margin: 0;
+            position: absolute;
+          }
+
+          .form {
+            width: 230px;
+          }
+
+          input[type="text"] {
+            width: 68%;
+            padding: 0 10px;
+            border: none;
+            font-size: 0.75rem;
+            @include mobile {
+              width: 80%;
+              padding-left: 2rem;
+            }
+            @include tablet {
+              width: 80%;
+              padding-left: 2rem;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+
+        .desktop-only {
+          left: 12px !important;
+          top: 22px !important;
+          display: none;
+        }
+
+        .MagnifyingGlass {
+          width: 65px;
+          font-size: 14px;
+          cursor: pointer;
+          background: 0;
+          height: 18px;
+          line-height: 18px;
+          display: inline-block;
+          border: 0;
+          color: #f07800;
+          text-align: right;
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+  /// mobile-only
+  .nav-header {
+    height: auto;
+    @include mobile {
+      height: 100%;
+    }
+    @include tablet {
+      height: 100%;
+    }
+
+    .navbar-brand-mobile {
+      display: none;
+      @include mobile {
+        display: block;
+        padding: 1rem;
+      }
+      @include tablet {
+        display: block;
+        padding: 1rem;
+      }
+
+      img {
+        width: 10rem;
+      }
+    }
+
+    .ham-icons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .fa {
+        color: white;
+        @include mobile {
+          color: $orange;
+        }
+        @include tablet {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .mobLogoLink {
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .SearcContainer {
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .seach-field {
+    display: none;
+    width: 91%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 2rem;
+    box-shadow: 0 2px 5px 0 rgba(113,113,113,0.24);
+    border-radius: 5px;
+    border: none;
+    height: 2rem;
+    font-size: 0.875rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    background: white;
+    @include mobile {
+      display: block;
+    }
+    @include tablet {
+      display: block;
+    }
+
+    &:focus {
+      outline: none;
+      border: 1px solid $orange;
+      background: #FFFFF9;
+    }
+
+    input {
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .ui-autocomplete-input {
+      width: 75%;
+      border: none;
+      outline: none;
+      @include tablet {
+        width: 90%;
+      }
+      @media only screen and (max-width: 350px) {
+        width: 73%;
+      }
+    }
+  }
+
+  .fa-times-circle {
+    font-size: 1.9rem;
+  }
+}

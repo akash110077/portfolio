@@ -1,0 +1,13 @@
+
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="circular" transform="translate(-95.000000, -132.000000)" stroke="#FF8748" stroke-width="1.8">
+            <g id="Group-8-Copy-2" transform="translate(81.000000, 123.000000)">
+                <g id="Group-30" transform="translate(15.000000, 10.000000)">
+                    <path d="M13.7142857,14 L10.1790006,10.3910631 L13.7142857,14 Z" id="Path"></path>
+                    <path d="M10.1790006,1.78293596 C12.5077333,4.15987957 12.5077333,8.01381514 10.1790006,10.3910631 C7.85056603,12.768311 4.07498406,12.768311 1.74654951,10.3910631 C-0.582183171,8.01381514 -0.582183171,4.15987957 1.74654951,1.78293596 C4.07498406,-0.594311987 7.85056603,-0.594311987 10.1790006,1.78293596 Z" id="search"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,74 @@
+.contact {
+  .banner {
+    background: #FDE66C;
+    padding: 5rem 0;
+    @include mobile {
+      padding: 4rem 1rem;
+    }
+
+    .banner-img {
+      top: -4rem;
+      right: 2rem;
+      max-width: 10rem;
+      width: 10rem;
+      position: absolute;
+      position: absolute;
+      @include mobile {
+        top: -1.5rem;
+        right: 0;
+        max-width: 7rem;
+        width: 7rem;
+        position: absolute;
+      }
+    }
+  }
+
+  .contact-section {
+    .phone {
+      padding-left: 0;
+      list-style: none;
+      line-height: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 1em;
+          width: 1em;
+          background-image: url("../../img/contact-bullet.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-right: 0.5rem;
+          margin-top: 0.2rem;
+        }
+      }
+    }
+
+    .email {
+      padding-left: 0;
+      list-style: none;
+      line-height: 2rem;
+
+      li {
+        display: flex;
+        align-items: center;
+        // position: relative;
+        &::before {
+          content: '';
+          display: inline-block;
+          height: 1em;
+          width: 1em;
+          background-image: url("../../img/mail.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin-right: 0.5rem;
+          margin-top: 0.5rem;
+          // position: absolute;
+        }
+      }
+    }
+  }
+}

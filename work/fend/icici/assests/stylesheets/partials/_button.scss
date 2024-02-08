@@ -1,0 +1,147 @@
+.cta {
+  background-color: #F27B1A;
+  position: relative;
+  font-size: 14px;
+  font-weight: bold;
+  color: white !important;
+  line-height: 2rem;
+  letter-spacing: 0.46px;
+  text-align: center;
+  margin: 2rem auto 2rem 0;
+  width: 8rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2em;
+  transition: background-color 0.2s ease-in;
+  cursor: pointer;
+  @include mobile {
+    width: 9rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background-color: #FFA117;
+    text-decoration: none;
+    @include mobile {
+      background-color: #F27B1A;
+    }
+  }
+}
+
+.cta-invert {
+  background: white;
+  border: 2px solid $orange;
+  color: $orange !important;
+
+  &:hover {
+    border: none;
+    color: white !important;
+  }
+}
+
+.cta-invert-light {
+  background: white;
+  border: 1px solid $orange;
+  color: $orange !important;
+  font-weight: normal;
+  font-size: 14px;
+  height: 30px;
+  width: 6rem;
+  border-radius: 2rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  @include mobile {
+    height: 30px;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.cta-light {
+  font-weight: normal;
+  font-size: 14px;
+  height: 30px;
+  width: 7rem;
+}
+
+.link-btn {
+  color: $dark-blue;
+  font-size: 12px;
+  cursor: pointer;
+  position: relative;
+  font-weight: 400;
+  line-height: 23px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 85%;
+    height: 1px !important;
+    width: 100%;
+    left: 0;
+    background-color: $dark-blue;
+    transition: 0.4s ease-out all 0.1s;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      background-color: $dark-blue;
+      width: 50%;
+      left: 25%;
+      transition: 0.2s ease-out all 0.1s;
+    }
+  }
+}
+
+.add-btn {
+  width: 25px;
+  height: 25px;
+  color: $orange!important;
+  background: white;
+  box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+  -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+  -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+  border-radius: 50%;
+  cursor: pointer;
+  text-align: center;
+  @include mobile {
+    bottom: 2.2rem;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+  }
+  @include tablet {
+    right: -2rem;
+    bottom: 2.8rem;
+  }
+}
+
+.edit-span {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.skip-btn {
+  right: 3rem;
+  @include mobile {
+    right: 2rem;
+  }
+  @include tablet {
+    right: 2rem;
+  }
+}

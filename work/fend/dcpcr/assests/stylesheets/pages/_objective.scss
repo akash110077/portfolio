@@ -1,0 +1,28 @@
+.objectives {
+  .container-fluid {
+    padding: 2rem 0;
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  img {
+    max-width: 100%;
+    border: none;
+  }
+
+  .objective {
+    &:nth-child(odd) {
+      background: $light-blue;
+    }
+
+    .anchor-btn {
+      width: 4.5rem;
+      @include mobile {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

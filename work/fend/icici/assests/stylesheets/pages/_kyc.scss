@@ -1,0 +1,1286 @@
+.kyc {
+  .main-section {
+    .container {
+      padding: 2rem 0;
+
+      .left-hand-sidebar {
+        @include mobile {
+          display: none;
+        }
+        @include tablet {
+          display: none;
+        }
+      }
+    }
+    ////// icici bootstrap code for sidebar ///////
+    .modal-body {
+      position: relative;
+      padding: 0 15px 24px;
+    }
+
+    .modal-header {
+      padding: 10px 20px;
+      border-bottom: 1px solid #ffffff;
+    }
+
+    .modal {
+      text-align: center;
+    }
+
+    .modal-content {
+      border-radius: 0;
+    }
+    @media screen and (min-width: 768px) {
+      .modal:before {
+        display: inline-block;
+        vertical-align: middle;
+        content: " ";
+        height: 100%;
+      }
+    }
+
+    .mymodal {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+      width: 550px;
+    }
+
+    .mymodal1 {
+      display: inline-block;
+      text-align: left;
+      vertical-align: middle;
+      width: 400px;
+    }
+
+    #my_text:focus {
+      outline: 0;
+    }
+
+    .btn-red {
+      background-color: $orange;
+      background-image: linear-gradient($orange, #c34b12);
+      color: white;
+      border: 1px solid $orange;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      height: 1.8rem;
+      width: 7rem;
+    }
+
+    .btn-red:focus,
+    .btn-red:hover {
+      background-color: $orange;
+      background-image: linear-gradient($orange, #c34b12);
+      color: white;
+      border: 1px solid $orange;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      text-decoration: none;
+      outline: 1px solid transparent;
+    }
+
+    .btn-black {
+      background-color: #30312c;
+      color: white;
+      border: 1px solid #30312c;
+      padding: 5px 10px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .btn-white {
+      background: transparent;
+      border: 1px solid #9e9b9b;
+      padding: 5px 10px;
+      font-weight: 600;
+      display: block;
+      width: 80%;
+      margin-left: 8%;
+      margin-top: 10px;
+    }
+
+    .btn-white:hover {
+      background: #972b29;
+      border: 1px solid #972b29;
+      padding: 5px 10px;
+      font-weight: 600;
+      display: block;
+      width: 80%;
+      margin-left: 8%;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .btn-red1 {
+      background: #972b29;
+      border: 1px solid #972b29;
+      padding: 5px 10px;
+      font-weight: 600;
+      display: block;
+      width: 80%;
+      margin-left: 8%;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .btn-red2 {
+      background: #972b29;
+      border: 1px solid #972b29;
+      padding: 6px 43px;
+      font-weight: 600;
+      display: block;
+      margin-left: 8%;
+      margin-top: 10px;
+      color: white;
+    }
+
+    .btn-red1:focus {
+      background: #972b29;
+      border: 1px solid #972b29;
+      padding: 5px 10px;
+      font-weight: 600;
+      display: block;
+      width: 80%;
+      margin-left: 8%;
+      margin-top: 10px;
+      color: white;
+    }
+
+    table td {
+      vertical-align: top;
+      height: 30px;
+      padding: 0.5rem 0.5rem 0.5rem 0;
+      @include mobile {
+        max-width: 8rem;
+        min-width: 8rem;
+      }
+    }
+
+    .people-img {
+      .row {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+    }
+    /////////// end of sidebar code ///////////
+    ////// right hand side code ////////
+    .sum-col {
+      padding-left: 2rem;
+      @include mobile {
+        padding-left: 0;
+        padding-top: 2rem;
+        padding-right: 0;
+      }
+
+      .sum {
+        width: 100%;
+        border-radius: 5px;
+        background: white;
+        box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+        -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+        border: none;
+        cursor: pointer;
+        border: 1px solid transparent;
+        padding: 1rem;
+
+        .sub-heading {
+          margin-bottom: 0.3rem;
+        }
+
+        .btn-group {
+          border-radius: 5px;
+          box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+          -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+          -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+          border: none;
+          cursor: pointer;
+          margin-bottom: 1.5rem;
+          @include mobile {
+            width: 85%;
+          }
+
+          .btn-secondary {
+            font-size: 12px;
+            color: #AFAFAF;
+            background: white;
+            border: none;
+            padding: 0.1rem 1.25rem;
+            margin: 0;
+            @include mobile {
+              padding: 0.5rem 1.25rem;
+              width: 50%;
+            }
+            @include tablet {
+              padding: 0.5rem 1.25rem;
+            }
+
+            input {
+              width: 100%;
+            }
+
+            &:hover {
+              border: none;
+              margin: 0;
+            }
+          }
+
+          .focus {
+            box-shadow: none !important;
+          }
+
+          .active {
+            color: white;
+            background: $orange;
+
+            &:hover {
+              border: none;
+              margin: 0;
+            }
+            @include mobile {
+              width: 50%;
+            }
+          }
+        }
+
+        .sum-heading {
+          display: flex;
+          justify-content: space-between;
+
+          #edit-travel {
+            color: $orange;
+
+            &::after {
+              background-color: $orange;
+            }
+          }
+        }
+
+        .filled-details {
+          display: flex;
+          align-items: baseline;
+
+          h5 {
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0 0 0.5rem;
+          }
+
+          p {
+            font-size: 12px;
+            margin: 0;
+          }
+        }
+
+        .blue-text {
+          font-size: 12px;
+          padding-top: 0.5rem;
+          padding-bottom: 0.2rem;
+        }
+
+        .checkbox {
+          .checkbox-label {
+            color: $dark-blue;
+            font-size: 10px;
+
+            a {
+              color: $dark-blue;
+              text-decoration: underline;
+            }
+          }
+
+          .checkmark {
+            border: 1px solid $dark-blue;
+            height: 14px;
+            width: 14px;
+            top: 3px;
+          }
+        }
+      }
+    }
+
+    #travel-info {
+      .row {
+        margin-left: 0;
+      }
+    }
+
+    .detail-col {
+      padding: 0 1rem 0 3rem;
+      @include mobile {
+        padding: 0 2rem;
+      }
+      @include tablet {
+        padding: 0 3rem;
+      }
+
+      input {
+        box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39) !important;
+        -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+        -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+        border-radius: 5px;
+        border: none;
+        padding: 0.5rem 1rem;
+        color: $light-gray;
+        font-size: 12px;
+        width: 12rem;
+        border: 1px solid transparent;
+        -webkit-appearance: none;
+        letter-spacing: 0.08px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $orange;
+          background: #FFFFF9;
+        }
+      }
+
+      ::placeholder {
+        color: #AFAFAF;
+        opacity: 1;
+        /* Firefox */
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: #AFAFAF !important;
+      }
+
+      &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        color: #AFAFAF;
+      }
+
+      h3 {
+        color: $orange;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .nav {
+        justify-content: space-between;
+        align-items: center;
+        background: url("../../img/line.png") 0 7px no-repeat;
+        // width: 70%;
+        width: 55%;
+        margin: 1rem 0 2rem 2rem;
+        background-size: contain;
+        @include mobile {
+          width: 80%;
+          margin: 1rem auto 2rem;
+        }
+
+        .nav-item {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .nav-link {
+            background: white;
+            border-radius: 50%;
+            color: black;
+            position: relative;
+            box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            padding: 0;
+            height: 17px;
+            width: 17px;
+
+            span {
+              position: absolute;
+              top: 1.5rem;
+              left: -2.5rem;
+              color: #AFAFAF;
+              font-size: 12px;
+              width: 6rem;
+              text-align: center;
+            }
+          }
+
+          .active {
+            background: $dark-blue;
+
+            span {
+              color: $dark-blue;
+            }
+          }
+        }
+      }
+
+      .tab-content {
+        .tab-pane {
+          padding: 1rem 0 0;
+        }
+
+        .sub-heading {
+          color: $orange;
+          font-size: 14px;
+          font-weight: bold;
+
+          .head-link {
+            color: $orange;
+            font-size: 10px;
+            font-weight: normal;
+          }
+        }
+        //// end of customize radio button //////
+        form {
+          display: flex;
+
+          p {
+            margin-right: 5rem;
+            @include mobile {
+              margin-right: 2rem;
+            }
+          }
+        }
+
+        .sub-div {
+          padding: 0 0 1rem;
+          position: relative;
+          @include mobile {
+            padding-bottom: 0;
+          }
+
+          .sub-heading {
+            padding-bottom: 1rem;
+            padding-top: 1rem;
+            @include mobile {
+              padding-top: 2rem;
+            }
+          }
+
+          .details-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            @include mobile {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
+            .form-group {
+              position: relative;
+              display: flex;
+              flex-direction: column;
+              margin-right: 1rem;
+              // width: 8rem;
+              @include mobile {
+                margin-right: 0;
+              }
+              @include tablet {
+                margin-right: 0.5rem;
+              }
+            }
+
+            .date-form {
+              margin-left: 2.5rem;
+              @include mobile {
+                margin-left: 0;
+              }
+            }
+
+            .dropdown-form {
+              position: relative;
+              @include tablet {
+                width: 11rem;
+              }
+
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+
+            .label-text {
+              color: $dark-blue;
+              font-size: 12px;
+              letter-spacing: 0.43px;
+              display: flex;
+              justify-content: space-between;
+
+              img {
+                width: 0.75rem;
+              }
+            }
+
+            .date_input {
+              background-image: url("../../img/date.png");
+              background-position: right;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-size: 17px;
+              background-origin: content-box;
+            }
+
+            .input-name {
+              width: 100%;
+              @include mobile {
+                width: 100%;
+              }
+            }
+
+            .input-relationship {
+              width: 100%;
+              @include mobile {
+                width: 100%;
+              }
+            }
+
+            .input-passport {
+              width: 100%;
+              @include mobile {
+                width: 100%;
+              }
+            }
+
+            .input-birth {
+              width: 12rem;
+              background-size: 14px;
+              @include mobile {
+                width: 100%;
+              }
+            }
+
+            .relation-label {
+              margin-bottom: 2.7rem;
+              margin-right: 0.7rem;
+            }
+          }
+
+          .date-filter {
+            .form-group {
+              width: 11rem;
+            }
+          }
+
+          .form-div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+            @include mobile {
+              align-items: baseline;
+            }
+
+            .add-button-div {
+              display: flex;
+              align-items: center;
+              @include mobile {
+                width: 50%;
+              }
+            }
+
+            .checkbox {
+              @include mobile {
+                width: 100%;
+              }
+
+              .checkbox-label {
+                color: $dark-blue;
+                font-size: 10px;
+                margin: auto;
+                @include mobile {
+                  margin: 0 auto;
+                }
+
+                a {
+                  color: $dark-blue;
+                  text-decoration: underline;
+                }
+              }
+
+              .checkmark {
+                border: 1px solid $dark-blue;
+                height: 14px;
+                width: 14px;
+              }
+            }
+          }
+
+          .add-div {
+            margin-top: 2.5rem;
+            position: relative;
+            @include mobile {
+              flex-direction: row;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              margin-top: 3rem;
+
+              .form-group {
+                @include mobile {
+                  width: 75%;
+                }
+              }
+            }
+
+            .insurance-for {
+              z-index: 100 !important;
+            }
+          }
+
+          .add-checkbox-div {
+            @include mobile {
+              flex-wrap: wrap;
+            }
+
+            .add-button-div {
+              @include mobile {
+                width: 100%;
+                margin-bottom: 1.5rem;
+              }
+            }
+
+            .checkbox {
+              @include mobile {
+                margin-left: 0.5rem;
+              }
+
+              input {
+                @include tablet {
+                  width: inherit;
+                }
+              }
+            }
+
+            .checkmark {
+              top: 0;
+            }
+          }
+
+          .detail-margin {
+            margin-right: 1rem;
+          }
+        }
+
+        .region {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+
+          .card-text {
+            width: 21%;
+            @include mobile {
+              width: 44%;
+              margin-bottom: 1.5rem;
+            }
+
+            h5 {
+              font-size: 12px;
+              color: $dark-blue;
+              text-align: center;
+              letter-spacing: 0.43px;
+              padding-top: 1rem;
+            }
+          }
+
+          .card {
+            width: 100%;
+            height: 5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+            border: none;
+            border: 1px solid transparent;
+            @include mobile {
+              height: 8rem;
+            }
+            @media only screen and (max-width: 350px) {
+              height: 7rem;
+            }
+
+            .card-body {
+              justify-content: flex-start;
+              align-items: center;
+              display: flex;
+              flex-direction: column;
+              padding: 0.5rem;
+              height: 100%;
+              text-align: center;
+              @include mobile {
+                justify-content: space-around;
+                padding: 1rem;
+              }
+
+              .card_image {
+                width: 4.5rem;
+                margin-bottom: 0.6rem;
+                @include mobile {
+                  width: 5.5rem;
+                }
+                @media only screen and (max-width: 350px) {
+                  width: 4.5rem;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      #policy-plan {
+        .policy-main-col {
+          @include mobile {
+            padding: 1rem 0;
+          }
+        }
+
+        .collapse-div {
+          box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39) !important;
+          -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+          -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+          border-radius: 5px;
+          border: none;
+          padding: 0;
+          font-size: 12px;
+          width: 100%;
+          background: white;
+          -webkit-appearance: none;
+          margin-bottom: 2.5rem;
+        }
+
+        .btn-link {
+          border: none;
+          padding: 0.5rem 1rem;
+          color: $light-gray;
+          font-size: 12px;
+          width: 100%;
+          background: white;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          -webkit-appearance: none;
+          letter-spacing: 0.08px;
+          text-decoration: none;
+
+          &:focus {
+            outline: none;
+          }
+
+          &::after {
+            content: "\f077";
+            color: $orange;
+            font-size: 1rem;
+            font-family: 'FontAwesome';
+            transition: all 0.5s;
+          }
+
+          &:hover {
+            outline: none;
+            text-decoration: none;
+          }
+        }
+
+        .collapsed {
+          &::after {
+            content: "\f078";
+            color: $orange;
+            font-size: 1rem;
+            font-family: 'FontAwesome';
+            transition: all 0.5s;
+          }
+        }
+
+        .applicant-content {
+          padding: 1rem;
+          margin: 0;
+
+          .filled-details {
+            width: 33.3%;
+            @include mobile {
+              width: 50%;
+            }
+
+            &:last-child {
+              width: 100%;
+            }
+
+            .black-text {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .nominee {
+          .form-group {
+            @include mobile {
+              width: 70%;
+            }
+
+            &:last-child {
+              margin-right: 0;
+              margin-left: 0.3rem;
+              @include mobile {
+                margin-left: inherit;
+              }
+            }
+
+            .relation-for {
+              width: 5.5rem;
+              @include mobile {
+                width: 100%;
+              }
+            }
+          }
+        }
+
+        .employee-referral {
+          justify-content: space-between;
+          margin-bottom: 2.6rem;
+          @include mobile {
+            margin-bottom: 0.5rem;
+          }
+
+          .form-group {
+            width: 10rem;
+            @include mobile {
+              width: 70%;
+            }
+            @media only screen and (max-width: 350px) {
+              width: 70%;
+            }
+
+            .orange-text {
+              font-size: 12px;
+            }
+          }
+        }
+
+        .btn-col {
+          @include mobile {
+            padding: 0;
+          }
+        }
+
+        .nominee-name {
+          width: 8.5rem;
+          @include mobile {
+            width: 100%;
+          }
+        }
+      }
+
+      #payment {
+        .pay-main-col {
+          @include mobile {
+            padding: 1rem 0;
+          }
+        }
+
+        .debit-details {
+          .form-group {
+            width: 50%;
+          }
+        }
+
+        .details-box {
+          justify-content: space-between;
+          align-items: flex-start;
+          @include mobile {
+            margin: 0;
+          }
+
+          input {
+            width: 14rem;
+            margin-top: -0.5rem;
+            margin-bottom: 0.5rem;
+            @include mobile {
+              margin-top: auto;
+            }
+            @include tablet {
+              width: 11rem;
+            }
+          }
+        }
+
+        .checkbox {
+          .pay-checkbox-label {
+            color: #827F7F;
+            font-size: 12px;
+
+            a {
+              color: $dark-blue;
+              text-decoration: underline;
+            }
+          }
+
+          .checkmark {
+            border: 1px solid $dark-blue;
+            height: 14px;
+            width: 14px;
+          }
+        }
+
+        .btn-col {
+          @include mobile {
+            padding: 0;
+          }
+        }
+      }
+
+      .btn-col {
+        @include mobile {
+          padding: 1rem 0;
+        }
+      }
+
+      .buttons-div {
+        display: flex;
+        padding-top: 1rem;
+        // justify-content: space-between;
+        width: 100%;
+        // @include mobile {
+        //   flex-direction: column;
+        // }
+        .buttons {
+          display: flex;
+          margin-left: 1rem;
+          @include mobile {
+            margin: 0 auto;
+          }
+
+          .cta {
+            @include mobile {
+              width: 9rem;
+            }
+            @media only screen and (max-width: 350px) {
+              width: 7rem;
+            }
+          }
+        }
+
+        .cta-invert {
+          // margin-right: 1rem;
+          // @include mobile {
+          //   margin: 1rem 0;
+          // }
+        }
+
+        .talk {
+          color: $orange;
+          font-weight: bold;
+          font-size: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          @include mobile {
+            margin-top: 2rem;
+          }
+
+          img {
+            width: 25px;
+            margin-left: 1rem;
+            @include mobile {
+              width: 15px;
+              margin-left: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+
+    #third_tab {
+      .form-group {
+        position: relative;
+      }
+
+      .dropdown {
+        width: 100%;
+      }
+
+      .relation-label {
+        margin-bottom: 2.7rem;
+        margin-right: 0.7rem;
+      }
+
+      .dropdown-el {
+        left: 14px;
+        @include mobile {
+          left: 0;
+        }
+      }
+    }
+    //// end of right hand side code ////////
+  }
+
+  .remove {
+    position: absolute;
+    left: -1.6rem;
+    bottom: -62px;
+    @include mobile {
+      position: relative;
+      margin-top: 0;
+      right: 0;
+      left: inherit;
+      bottom: 0;
+    }
+
+    img {
+      cursor: pointer;
+      width: 20px;
+      @include mobile {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.passanger-lebel {
+  position: absolute;
+  top: -30px;
+  @include mobile {
+    display: block;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .label {
+    color: $orange;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.balance {
+  margin-left: 6rem;
+  @include mobile {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+}
+
+.add-form {
+  width: 100%;
+  @include mobile {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .form {
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      width: 8rem;
+      @include mobile {
+        width: 100%;
+      }
+
+      input {
+        width: 8rem !important;
+        @include mobile {
+          width: 12rem !important;
+        }
+      }
+    }
+
+    .house {
+      // flex: 2 2 auto;
+      width: 12rem !important;
+
+      input {
+        width: 12rem !important;
+      }
+    }
+  }
+}
+
+.form-upload {
+  flex-direction: row !important;
+  align-items: flex-end;
+  @include mobile {
+    flex-wrap: wrap;
+  }
+
+  input[type="file"] {
+    z-index: 999;
+    line-height: 0;
+    font-size: 50px;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity = 0);
+    -ms-filter: “alpha(opacity=0)“;
+    cursor: pointer;
+    _cursor: hand;
+    margin: 0;
+    padding: 0;
+    left: 0;
+  }
+
+  .add-photo-btn {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    background-color: $orange;
+    border-radius: 2rem;
+    color: #fff;
+    padding: 0.25rem;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: 0.4px;
+    float: left;
+    width: 10rem;
+    font-weight: bold;
+    margin-left: 2rem;
+    margin-bottom: 0;
+    @include mobile {
+      margin-top: 1rem;
+    }
+
+    input {
+      width: 10rem !important;
+    }
+  }
+
+  input[type=“text”] {
+    float: left;
+  }
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+
+  .btn {
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    background-color: $orange;
+    padding: 8px 20px;
+    border-radius: 2rem;
+    padding: 0.4rem;
+    width: 10rem;
+    border-radius: 2rem;
+  }
+
+  input[type=file] {
+    font-size: 100px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+}
+
+.gender-form {
+  width: 5rem;
+
+  .gender {
+    width: 5rem;
+  }
+}
+
+.employee-referral {
+  .form-group {
+    width: 20%;
+    @include mobile {
+      width: 100%;
+    }
+  }
+}
+
+.upload-img {
+  width: 100%;
+}
+
+#myModal {
+  .modal-header {
+    border-bottom: none;
+  }
+}
+
+#myModal1 {
+  .modal-header {
+    border-bottom: none;
+  }
+}
+
+#myModal2 {
+  .modal-header {
+    border-bottom: none;
+  }
+}
+.pre_btn {
+  color: $orange;
+
+  &::after {
+    background-color: $orange;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::after {
+      background-color: $orange;
+    }
+  }
+}
+
+#pancard {
+  display: none;
+  position: absolute;
+  right: 3.8rem;
+  top: 4rem;
+  color: $dark-blue;
+  font-size: 0.75rem;
+}
+
+#modalimg{
+  display: none;
+  position: absolute;
+  right: 4.5rem;
+  top: 4rem;
+  color: $dark-blue;
+  font-size: 0.75rem;
+@include mobile{
+  right: 6rem;
+  top:7.2rem;
+}
+}
+
+#file_upload {
+  // display: none;
+  position: absolute;
+  left: 5.8rem;
+  top: 0;
+  color: $dark-blue;
+  font-size: 0.75rem;
+}
+
+.upload-file-btn {
+  position: inherit;
+}
+
+.link-btn{
+  color: $orange;
+  &::after{
+    background: $orange;
+  }
+  &:hover::after{
+    background: $orange;
+  }
+
+}

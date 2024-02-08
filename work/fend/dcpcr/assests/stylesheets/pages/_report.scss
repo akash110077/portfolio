@@ -1,0 +1,415 @@
+.school-report {
+  overflow-x: hidden;
+
+  .container {
+    padding: 5rem 0 2rem;
+    @include mobile{
+      padding: 2rem 1rem;
+    }
+    @include tablet{
+      padding: 5rem 2.5rem;
+    }
+  }
+
+  .report-section {
+    .school-image-section {
+      background: transparent;
+      border: none;
+
+      .card-top {
+        background: white;
+        box-shadow: 0 3px 8px 0 rgba(73,73,73,0.13);
+        border-radius: 3.84px;
+        padding: 2.2rem;
+        text-align: center;
+
+        img {
+          max-width: 9rem;
+          margin: 0 auto;
+          @include tablet{
+            max-width: 5rem;
+          }
+        }
+      }
+
+      .card-bottom {
+        margin: 2rem 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .common-cta {
+          width: 100%;
+          flex: 0 0 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2rem;
+          text-transform: uppercase;
+          margin: 0 0 1rem;
+        }
+
+        .school-image-section-icon {
+          width: 30%;
+          color: $orange;
+
+          svg {
+            margin: 0 0.4rem 0 0;
+          }
+        }
+      }
+    }
+
+    .school-report-info {
+      margin: 0 0 2rem;
+      @include mobile{
+      margin: 0 0 1.5rem;
+      }
+
+      h6 {
+        font-weight: bold;
+      }
+
+      img {
+        max-width: 3rem;
+      }
+      // a {
+      //   color: #2683D7;
+      //   border-bottom: 1px solid;
+      // }
+      .streams {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1rem 0 0;
+
+        .stream {
+          width: 50%;
+          display: flex;
+          align-items: center;
+          margin: 0 0 1rem;
+
+          @include tablet{
+            width: 100%;
+          }
+          p {
+            margin: 0 0 0 0.5rem;
+          }
+        }
+      }
+
+      ul {
+        li {
+          position: relative;
+          padding: 0 0 0 1.4rem;
+
+          &:nth-child(n+2) {
+            margin-top: 0.5rem;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 15px;
+            top: 6px;
+            left: 0;
+            background-image: url("../../img/report/award.png");
+            background-repeat: no-repeat;
+            background-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .report-description {
+    .nav {
+      width: 100%;
+      background: #E5EDFB;
+      text-align: center;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      @include mobile {
+        flex-wrap: nowrap;
+        overflow: scroll;
+        // display: inline-block;
+        justify-content: flex-start;
+        &::-webkit-scrollbar{
+          display: none;
+        }
+      }
+
+      .nav-item {
+        width: 21%;
+        @include mobile {
+          width: 19rem;
+          white-space: nowrap;
+        }
+        @include tablet{
+          height: 100%;
+        }
+
+        .nav-link {
+          background: transparent;
+          font-family: $font-noto;
+          font-weight: bold;
+          font-size: 1.25rem;
+          padding: 1.5rem;
+          color: $grey;
+          position: relative;
+          height: 100%;
+
+          &.active {
+            position: relative;
+
+            &::after {
+              content: '';
+              width: 90%;
+              border-radius: 4px;
+              height: 7px;
+              background: $blue;
+              position: absolute;
+              left: 50%;
+              bottom: 0;
+              transform: translate(-50%);
+            }
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      overflow: hidden;
+
+      .report-description-cards {
+        margin: 2rem 0 2rem 3rem;
+        @include mobile {
+          margin: 2rem 0 2rem 1.5rem;
+        }
+
+        .item {
+          .card-report {
+            border: none;
+            box-shadow: 0 4px 6px 0 rgba(58,59,63,0.12);
+            border-radius: 4.8px;
+            background: #FFFFFF;
+
+            .card-top {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              padding: 1rem 2.8rem 0 1rem;
+
+              img {
+                max-width: 3rem;
+                margin-right: 1rem;
+              }
+
+              h6 {
+                font-size: 14px;
+                color: $grey;
+                font-family: $font-noto;
+                font-weight: bold;
+                flex: 1;
+                line-height: 1.5rem;
+              }
+
+              .report-rating {
+                width: 45%;
+                display: flex;
+                justify-content: flex-start;
+                margin: 0.5rem 0 1rem;
+
+                span {
+                  svg {
+                    display: none;
+                  }
+                  width: 12px;
+                  height: 12px;
+                  background-image: white;
+                  border: 1px solid #d8d8d8;
+                  border-radius: 50%;
+                  margin-right: 0.5rem;
+                }
+              }
+
+              .rating1 {
+                span {
+                  &:nth-child(1) {
+                    background-image: linear-gradient(180deg, #FFA251 0%, #E04E01 100%);
+                    border: none;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+
+              .rating2 {
+                span {
+                  &:nth-child(-n+2) {
+                    background-image: linear-gradient(180deg, #ffc636 0%, #d88a0a 100%);
+                    border: none;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+
+              .rating3 {
+                span {
+                  &:nth-child(-n+3) {
+                    background-image: linear-gradient(180deg, #FFF656 0%, #DDA100 100%);
+                    border: none;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+
+              .rating4 {
+                span {
+                  &:nth-child(-n+4) {
+                    background-image: linear-gradient(180deg, #96FF78 0%, #4CB800 100%);
+                    border: none;
+                    margin-right: 0.5rem;
+                  }
+                }
+              }
+            }
+
+            .card-bottom {
+              color: $grey;
+              font-size: 14px;
+              padding-right: 1rem;
+              display: none;
+
+              ul {
+                list-style: none;
+
+                li {
+                  position: relative;
+                  padding-left: 1rem;
+
+                  &::before {
+                    content: '';
+                    background-color: $blue;
+                    font-weight: bold;
+                    display: inline-block;
+                    width: 0.5rem;
+                    height: 0.5rem;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 4px;
+                  }
+                }
+              }
+            }
+
+            .card-footer {
+              background: $light-blue;
+              border-top: none;
+              padding: 0;
+              cursor: pointer;
+
+              img {
+                padding: 0.5rem 1rem;
+                width: 3rem;
+                margin: 0 auto;
+              }
+            }
+          }
+        }
+
+        .owl-carousel {
+          .owl-item {
+            width: 19rem !important;
+          }
+        }
+
+        .owl-nav {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(0%, -60%);
+
+          .owl-next {
+            position: absolute;
+            right: 5%;
+            top: 0;
+          }
+
+          .owl-prev {
+            position: absolute;
+            left: -1%;
+            top: 0;
+            @include mobile {
+              left: -5%;
+            }
+            @include tablet{
+              left: -3%;
+            }
+          }
+
+          svg {
+            color: $orange;
+            font-size: 30px;
+            position: absolute;
+            top: -1rem;
+            left: -0.4rem;
+          }
+          .disabled{
+            svg{
+              color: #b7b4b4;
+            }
+          }
+        }
+
+        .owl-stage {
+          height: 9rem;
+        }
+      }
+    }
+
+    .card-badge {
+      background: $orange;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+
+  .mobile-sticky-card {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    z-index: 10;
+    padding: 1rem;
+    justify-content: space-between;
+
+    .common-cta {
+      width: 50%;
+      flex: 0 0 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 2rem;
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    .school-image-section-icon {
+      color: $orange;
+
+      svg {
+        margin: 0 0.4rem 0 0;
+      }
+    }
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+
+}

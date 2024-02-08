@@ -1,0 +1,67 @@
+.feedback {
+  .bg-blur{
+    -webkit-filter: blur(4px);
+  }
+  .feedback_form {
+    .form-box {
+      padding: 5rem;
+      @include mobile{
+        padding: 2rem;
+      }
+
+      .form-input {
+        width: 40%;
+        background: #FFFFFF;
+        box-shadow: 0 3px 8px 0 rgba(73,73,73,0.13);
+        border-radius: 4px;
+        line-height: 1.25rem;
+        border: none;
+        padding: 0.5rem;
+        @include mobile{
+          width: 100%;
+        }
+        &:focus{
+          outline: none;
+        }
+        &::placeholder{
+          font-size: 0.875rem;
+          color: #BDBDBD;
+          font-family: $font-source;
+        }
+      }
+    }
+    .comment-box{
+      border: none;
+      box-shadow: 0 3px 8px 0 rgba(73,73,73,0.13);
+      background: #FFFFFF;
+      padding: 0.5rem;
+      &:focus{
+        outline: none;
+      }
+      @include mobile{
+        width: 100%;
+      }
+    }
+    .common-cta{
+      width: 20%;
+      @include mobile{
+        width: 50%;
+      }
+    }
+  }
+  .modal{
+    .modal-content{
+      .close{
+        &:focus{
+          outline: none;
+        }
+      }
+      .modal-body{
+        padding: 0rem 2rem 3rem 2rem;
+        .section-heading{
+          color: #000000;
+        }
+      }
+    }
+  }
+}

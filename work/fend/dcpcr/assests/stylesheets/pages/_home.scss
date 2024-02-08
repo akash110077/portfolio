@@ -1,0 +1,597 @@
+body {
+  .wrapper {
+    // banner
+    .banner-section {
+      .banner-text {
+        .section-heading {
+          width: 85%;
+          line-height: 2.375rem;
+          @include mobile {
+            width: 100%;
+        @media screen and (orientation: landscape) {
+          width: 100%;
+        }
+          }
+        }
+
+        .section-content {
+          width: 80%;
+          margin-top: 1rem;
+          font-family: $font-source;
+          line-height: 1.25rem;
+          font-weight: 350;
+          letter-spacing: 0.3px;
+          @include mobile {
+            width: 100%;
+            @media screen and (orientation: landscape) {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .bg-img {
+        background-image: url("../../img/banner-rectangle.png");
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 24rem;
+
+        img {
+          width: 75%;
+          border-radius: 4px;
+          object-fit: contain;
+        }
+      }
+    }
+    // cards
+    .cards-section {
+      background: linear-gradient(-180deg, #354ECA 0%, #2B19A7 100%);
+      box-shadow: 0 2px 4px 0 rgba(4,15,53,0.28);
+      border-radius: 4px;
+
+      .card-box {
+        @include mobile{
+          &:nth-child(n+2){
+            padding-top: 2rem;
+          }
+          @media screen and (orientation: landscape) {
+            &:nth-child(n+2){
+              padding-top: 2rem;
+            }          }
+        }
+        @include tablet{
+          &:nth-child(n+3){
+            padding-top: 2rem;
+          }
+          @media screen and (orientation: landscape){
+            &:nth-child(n){
+              padding-top: 0rem;
+            }
+          }
+        }
+
+        .card {
+          padding: 2rem 0;
+          height: 100%;
+          @include mobile {
+            width: 100%;
+            height: 100%;
+
+          }
+          @include tablet {
+            margin-bottom: 2rem;
+            height: 100%;
+          }
+
+          img {
+            width: 8rem;
+            object-fit: contain;
+          }
+
+          .card-body {
+            padding: 1.25rem 1.25rem 0;
+
+            .card-title {
+              color: $grey !important;
+              text-align: center;
+              width: 100%;
+              margin: 1rem auto;
+              font-size: 1.25rem;
+            }
+
+            .small-text {
+              text-align: left;
+              line-height: 25px;
+              width: 100%;
+              margin: 0 auto;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+    // video player
+    .video-section {
+      .home_video {
+        span {
+          height: 6rem;
+          width: 6rem;
+          border-radius: 50%;
+          background: #fff;
+          position: absolute;
+          left: 5rem;
+          bottom: 12rem;
+
+          &:hover {
+            background: darkorange;
+
+            .fa-play {
+              color: #ffffff;
+            }
+          }
+
+          .fa-play {
+            font-size: 2.5rem;
+            color: darkorange;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+          }
+        }
+
+        .video-text {
+          position: absolute;
+          left: 7%;
+          bottom: 5%;
+          @include mobile {
+            width: 95%;
+            padding: 0 1rem;
+            left: 5%;
+          }
+        }
+
+        .video_wrapper {
+          width: 1200px;
+          margin: 0 auto;
+          position: relative;
+          background-color: #000;
+          @include mobile {
+            width: 100%;
+          }
+          @include tablet {
+            width: 100%;
+          }
+        }
+
+        .video_wrapper_full {
+          padding-top: 500px;
+        }
+
+        .videoIframe {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: transparent;
+        }
+
+        .videoPoster {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url("../../img/video-poster.png");
+          background-size: cover;
+          border: none;
+          font-family: $font-noto;
+          background-position: center center;
+        }
+
+        .videoPoster:hover {
+          cursor: pointer;
+        }
+
+        .videoPoster:before {
+          content: '';
+          position: absolute;
+          bottom: 30%;
+          left: 9%;
+          width: 80px;
+          height: 80px;
+          margin: -40px 0 0 -40px;
+          background: #fff;
+          border-radius: 100%;
+          -webkit-transition: border-color 300ms;
+          -moz-transition: border-color 300ms;
+          transition: border-color 300ms;
+          @include mobile {
+            bottom: 45%;
+            left: 20%;
+          }
+        }
+
+        .videoPoster:after {
+          content: '';
+          position: absolute;
+          bottom: 34%;
+          left: 9.1%;
+          width: 0;
+          height: 0;
+          margin: -20px 0 0 -10px;
+          border-left: 27px solid darkorange;
+          border-top: 20px solid transparent;
+          border-bottom: 20px solid transparent;
+          -webkit-transition: border-color 300ms;
+          -moz-transition: border-color 300ms;
+          transition: border-color 300ms;
+          @include mobile {
+            bottom: 48.8%;
+            left: 21%;
+          }
+        }
+
+        .videoPoster:focus:before,
+        .videoPoster:hover:before {
+          border-color: #f00;
+          background: darkorange;
+        }
+
+        .videoPoster:focus:after,
+        .videoPoster:hover:after {
+          border-left-color: #fff;
+        }
+
+        .videoWrapperActive .videoPoster {
+          opacity: 0;
+          height: 0;
+          -webkit-transition-delay: 0s, 800ms;
+          -moz-transition-delay: 0s, 800ms;
+          transition-delay: 0s, 800ms;
+        }
+
+        .fa-caret-left {
+          width: 2rem;
+          height: 2rem;
+          background: darkorange;
+          border-radius: 50%;
+          position: absolute;
+          top: 4rem;
+          left: -1rem;
+          color: #ffffff;
+
+          &:before {}
+        }
+
+        .fa-caret-right {
+          width: 2rem;
+          height: 2rem;
+          background: darkorange;
+          border-radius: 50%;
+          position: absolute;
+          top: 4rem;
+          right: -1rem;
+          color: #ffffff;
+        }
+      }
+    }
+    // deputy CM
+    .dcm-section {
+      .container {
+        @include tablet {
+          padding-bottom: 0;
+          @media screen and (orientation: landscape){
+            padding-top: 0;
+            padding-bottom: 6rem;
+          }
+        }
+      }
+
+      .msg-padding {
+        padding: 0 6rem;
+        @include mobile {
+          padding: 0;
+        }
+        @include tablet {
+          padding: 4rem 1rem;
+          @media screen and (orientation: landscape){
+            padding: 0 1rem;
+          }
+        }
+
+        .dcm-msg {
+          // margin-top: 5rem;
+          @include mobile {
+            padding: 1rem;
+          }
+
+          h5 {
+            font-size: 1.125rem;
+            color: $blue;
+            font-family: $font-noto;
+            font-weight: normal;
+          }
+
+          h6 {
+            line-height: 1.5rem;
+            font-weight: normal;
+            letter-spacing: 0.4px;
+          }
+
+          .common-cta {
+            width: 9.3125rem;
+            height: 2.5rem;
+            border-radius: 1.875rem;
+            font-size: 1rem;
+            font-family: $font-noto;
+          }
+        }
+      }
+    }
+    // partners carousel
+    .partner-carousel-section {
+      background: $light-blue;
+
+      .partners-carousel {
+        .owl-carousel {
+          .item {
+            height: 12.5rem;
+
+            .card {
+              height: 12rem;
+              border: none;
+              background: #FFFFFF;
+              box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+              border-radius: 4px;
+
+              .partner-1 {
+                width: 7rem;
+              }
+            }
+          }
+
+          .owl-nav {
+            .owl-prev {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              background: $orange;
+              position: absolute;
+              top: 50%;
+              left: -1rem;
+              transform: translate(10%, -50%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .fa-caret-left {
+                color: #fff;
+                font-size: 1.5rem;
+                margin-right: 5px;
+              }
+
+              &:hover {
+                background: #fff;
+                border: 1px solid $orange;
+
+                .fa-caret-left {
+                  color: $orange;
+                }
+              }
+            }
+
+            .owl-next {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              background: $orange;
+              position: absolute;
+              top: 50%;
+              right: -0.5rem;
+              transform: translate(10%, -50%);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              .fa-caret-right {
+                color: #fff;
+                font-size: 1.5rem;
+                margin-left: 5px;
+              }
+
+              &:hover {
+                background: #fff;
+                border: 1px solid $orange;
+
+                .fa-caret-right {
+                  color: $orange;
+                }
+              }
+            }
+          }
+
+          .disabled {
+            @include tablet {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    // thumbnail banner
+    .thumbnail-banner-section {
+      .carousel {
+        .carousel-item {
+          img {
+            width: 76.4%;
+            @include mobile {
+              width: 100%;
+            }
+            @include tablet {
+              width: 100%;
+            }
+          }
+
+          .banner-caption {
+            width: 18.45rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: $orange;
+            padding: 2rem;
+            @include mobile {
+              width: 100%;
+              position: relative;
+              padding: 1rem;
+            }
+            @include tablet {
+              width: 100%;
+              position: relative;
+            }
+
+            h5 {
+              font-size: 1.375rem;
+              color: #fff;
+              font-family: $font-noto;
+            }
+
+            .caption-date {
+              letter-spacing: 0.3px;
+              font-family: $font-noto !important;
+            }
+
+            .caption-text {
+              font-size: 0.75rem;
+              color: #fff;
+              font-family: $font-noto;
+              letter-spacing: 0.3px;
+            }
+          }
+        }
+
+        .carousel-indicators {
+          li {
+            width: 8rem;
+
+            img {
+              border-radius: 4px;
+              width: 7.5rem;
+              @include mobile {
+                width: 3.5rem;
+              }
+            }
+          }
+
+          .active {
+            img {
+              border: 4px solid $orange;
+              border-radius: 5px;
+            }
+          }
+        }
+      }
+    }
+    // twitter cards
+    .twitter-card-section {
+      background: $light-blue;
+
+      .twitter-card-box {
+        @include mobile {
+          flex-direction: column;
+        }
+
+        .card {
+          box-shadow: 0 2px 4px 0 rgba(4,15,53,0.28);
+          border-radius: 4.8px;
+          @include mobile {
+            width: 100%;
+            margin-bottom: 1.8rem;
+          }
+          @include tablet {
+            margin-bottom: 1.8rem;
+          }
+
+          .card-header {
+            background: #fff;
+            border: none;
+            padding-top: 1.25rem;
+
+            .dcpcr-sm {
+              width: 2.25rem;
+              height: 2.25rem;
+            }
+
+            .dcpcr-txt {
+              line-height: 0.93rem;
+
+              .txt-1 {
+                font-weight: 500;
+              }
+
+              .txt-2 {
+                font-weight: 200;
+                color: #6A7783;
+                font-size: 0.75rem;
+              }
+            }
+          }
+
+          .card-body {
+            .card-text {
+              margin-bottom: 0.3rem;
+
+              span {
+                color: #3179BE;
+              }
+            }
+
+            .card-time {
+              font-size: 0.75rem;
+              color: #6A7783;
+            }
+
+            .twitter-card-icons {
+              width: 5rem;
+
+              .twitter-share {
+                svg {
+                  &:hover {
+                    path {
+                      fill: $blue;
+                    }
+                  }
+                }
+              }
+
+              .twitter-retweet {
+                svg {
+                  &:hover {
+                    path {
+                      fill: $blue;
+                    }
+                  }
+                }
+              }
+
+              .twitter-heart {
+                svg {
+                  &:hover {
+                    path {
+                      fill: $blue;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

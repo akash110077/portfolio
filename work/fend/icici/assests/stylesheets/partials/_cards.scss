@@ -1,0 +1,154 @@
+.mob-table {
+  .card {
+    padding: 2rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    border: none;
+
+    .card-elements {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    table {
+      th {
+        font-weight: normal;
+        border: none;
+      }
+
+      td {
+        border: none;
+        max-width: inherit !important;
+        min-width: inherit !important;
+        padding: 0.75rem !important;
+      }
+
+      .link-btn {
+        text-decoration: none;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        margin-top: 0.5rem;
+
+        img {
+          width: 6px;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    .show-btn {
+      color: $dark-blue;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 12px;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 85%;
+        height: 1px !important;
+        width: 100%;
+        left: 0;
+        background-color: $dark-blue;
+        transition: 0.4s ease-out all 0.1s;
+      }
+    }
+  }
+
+  .selected {
+    background-color: #FEF5EF;
+    border: 1px solid #F27B1A;
+  }
+
+  .know-more-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    .card-link-btn {
+      text-decoration: none;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+      margin-left: 0.3rem;
+      color: $dark-blue;
+
+      img {
+        width: 6px;
+        margin-left: 3px;
+      }
+
+      &:hover {
+        img {
+          margin-left: 7px;
+          -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  margin-top: 1rem;
+  background: #FEF5EF;
+  box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+  border-radius: 5px;
+  padding: 1.5rem;
+  width: 88%;
+  border: none;
+  @include mobile {
+    width: 100%;
+  }
+
+  p {
+    font-size: 0.75rem;
+    width: 93%;
+  }
+
+  table {
+    width: 100%;
+    color: $dark-blue;
+    font-size: 0.87rem;
+
+    td,
+    th {
+      border: none;
+    }
+
+    thead {
+      th {
+        text-transform: uppercase;
+      }
+    }
+
+    tbody {
+      th {
+        font-weight: 400;
+        padding: 0 0.5rem 0.5rem 0.75rem;
+      }
+    }
+
+    tr {
+      th {
+        &:nth-child(1) {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

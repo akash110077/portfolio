@@ -1,0 +1,176 @@
+.success {
+  .sec_padding {
+    padding: 2rem;
+  }
+  .status {
+    display: flex;
+    align-items: center;
+    background: #F3F3F3;
+    margin-bottom: 2rem;
+    @include mobile {
+      align-items: flex-start;
+    }
+
+    img {
+      width: 4.5rem;
+      @include mobile {
+        width: 2.5rem;
+      }
+      @include tablet {
+        width: 2.5rem;
+      }
+    }
+
+    .successful_text {
+      padding-left: 2rem;
+      @include mobile {
+        padding-left: 1rem;
+      }
+
+      h4 {
+        margin-bottom: 0.3rem;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.71px;
+      }
+
+      p {
+        margin: 0;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+
+  .transaction {
+    background: white;
+
+    img {
+      width: 14rem;
+      padding-bottom: 1rem;
+      @include mobile {
+        width: 10rem;
+      }
+      @include tablet {
+        width: 12rem;
+      }
+    }
+  }
+
+  .payment {
+    border-bottom: 1px solid #d8d8d88a;
+    width: 100%;
+    background: #F3F3F3;
+    display: flex;
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 33.3%;
+      @include mobile {
+        width: 100%;
+        margin-bottom: 0.5rem;
+      }
+
+      .blue-text {
+        padding-bottom: 0.5rem;
+        @include mobile {
+          padding-bottom: 0;
+        }
+      }
+
+      .black-text {
+        font-weight: bold;
+      }
+
+      &:last-child {
+        @include mobile {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .total_amount {
+    border-bottom: 1px solid #d8d8d88a;
+    background: #F3F3F3;
+
+    .black-text {
+      font-weight: bold;
+      font-size: 24px;
+    }
+  }
+
+  .table-section {
+    background: #F3F3F3;
+    width: 100%;
+
+    .policy {
+      color: $dark-blue;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .table {
+      margin-bottom: 0;
+      display: flex;
+      @include mobile {
+        flex-wrap: wrap;
+      }
+
+      .box {
+        width: 23.3%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include mobile {
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        .black-text {
+          margin-top: 1rem;
+          background: white;
+          padding: 0.5rem 0.5rem 0.5rem 0;
+          @include mobile {
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+          }
+        }
+
+        .first_box {
+          padding-left: 0.5rem !important;
+        }
+
+        &:last-child {
+          @include mobile {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .box2 {
+        width: 15%;
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .download {
+    background: #F3F3F3;
+    width: 100%;
+
+    .blue-text {
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+
+      .download_img {
+        width: 1.4rem;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

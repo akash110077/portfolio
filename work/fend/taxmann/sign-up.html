@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taxmann</title>
+  <!--common style-->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="https://use.typekit.net/yfr1bjm.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link href="assests/stylesheets/main.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/owl.carousel.min.css" rel="stylesheet" />
+  <link href="lib/owlcarousel/owl.theme.default.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/css/select2.min.css" rel="stylesheet" />
+  <!-- endinject -->
+</head>
+
+<body class="home">
+
+  <section class="registration">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-md-offset-3">
+          <form id="msform-up" class="msform">
+            <div class="row">
+              <div class="col-lg-12 d-flex justify-content-between align-items-center flex-wrap">
+                <a href="#">
+                  <img src="img/main-logo.png" class="taxmann-logo" alt="">
+                </a>
+
+                <ul id="progressbar-up" class=" progress-tab pt-lg-0 pt-4">
+                  <li class="active">About you</li>
+                  <li>Verify</li>
+                  <li>Customize</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- sign-up 1st screen starts -->
+            <fieldset>
+              <div class="row pt-5 pt-lg-4">
+                <div class="col-lg-12 mx-auto">
+                  <h5 class="card-content">
+                    Be a part of largest and most accurate online database on Taxation and Corporate Laws
+                  </h5>
+                </div>
+              </div>
+
+              <div class="row pt-5">
+
+                <div class="col-lg-6 col-md-12 order-lg-2 order-1 static">
+                  <div class="form-group">
+                    <input type="text" id="name" class="form-control contact-feilds" name="fname" required />
+                    <label for="name" class="form-control-placeholder">Name</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" id="email" class="form-control contact-feilds" name="fname" required />
+                    <label for="email" class="form-control-placeholder">Email</label>
+                    <div class="alert red" role="alert">
+                        The email you entered doesn't belong to an account.
+                    </div>
+                  </div>
+
+                  <div class="form-group mb-2">
+                    <input type="password" id="password" class="form-control contact-feilds" name="fname" required />
+                    <label for="password" class="form-control-placeholder">Password
+                    </label>
+                    <img src="img/bookstore/password-eye.png" class="eye-sign-in" alt="">
+                    <div class="btn-group dropdown dropup tool-tip">
+                      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa fa-question-circle" aria-hidden="true"></i>
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="must-have">
+                          Your password must have:
+                        </div>
+                        <ul class="">
+                          <li>8 or more characters</li>
+                          <li>Upper or lower case letters</li>
+                          <li>Atleast one number</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <label class="check-container remember-me">Remember me
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="pt-5 pt-lg-0 col-lg-6 col-md-12 order-lg-1 order-2 static d-flex flex-column justify-content-center align-items-center">
+                  <a href="#" class="sign-google d-flex justify-content-center align-items-center">
+                    <svg class="mr-4" width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="1-Registration" transform="translate(-386.000000, -404.000000)" fill="#000000">
+                          <g id="Group-2" transform="translate(340.000000, 333.000000)">
+                            <g id="Group-55" transform="translate(0.000000, 55.000000)">
+                              <g id="button">
+                                <g id="super-g" transform="translate(46.000000, 16.000000)">
+                                  <path d="M9,3.48 C10.69,3.48 11.83,4.21 12.48,4.82 L15.02,2.34 C13.46,0.89 11.43,0 9,0 C5.48,0 2.44,2.02 0.96,4.96 L3.87,7.22 C4.6,5.05 6.62,3.48 9,3.48 L9,3.48 Z" id="Shape" fill="#EA4335"></path>
+                                  <path d="M17.64,9.2 C17.64,8.46 17.58,7.92 17.45,7.36 L9,7.36 L9,10.7 L13.96,10.7 C13.86,11.53 13.32,12.78 12.12,13.62 L14.96,15.82 C16.66,14.25 17.64,11.94 17.64,9.2 L17.64,9.2 Z" id="Shape" fill="#4285F4"></path>
+                                  <path d="M3.88,10.78 C3.69,10.22 3.58,9.62 3.58,9 C3.58,8.38 3.69,7.78 3.87,7.22 L0.96,4.96 C0.35,6.18 0,7.55 0,9 C0,10.45 0.35,11.82 0.96,13.04 L3.88,10.78 L3.88,10.78 Z" id="Shape" fill="#FBBC05"></path>
+                                  <path d="M9,18 C11.43,18 13.47,17.2 14.96,15.82 L12.12,13.62 C11.36,14.15 10.34,14.52 9,14.52 C6.62,14.52 4.6,12.95 3.88,10.78 L0.97,13.04 C2.45,15.98 5.48,18 9,18 L9,18 Z" id="Shape" fill="#34A853"></path>
+                                  <polygon id="Shape" fill="none" points="0 0 18 0 18 18 0 18"></polygon>
+                                </g>
+                              </g>
+                            </g>
+                          </g>
+                        </g>
+                      </g>
+                    </svg>
+                    <h2 class="">Sign in with Google</h2>
+                  </a>
+
+                  <a href="#" class="sign-fb d-flex justify-content-center align-items-center mt-4">
+                    <i class="fa fa-facebook fa-2x mr-4" aria-hidden="true"></i>
+                    <h2 href="#" class="">Sign in with Facebook</h2>
+                  </a>
+                </div>
+
+
+                <div class="col-lg-6 justify-content-lg-start justify-content-center offset-lg-6 col-sm-12 order-lg-3 order-1 static pt-5 d-flex align-items-center justify-content-lg-start justify-content-center">
+                  <button type="button" name="next" class="next-up submit-cta mr-5" value="Next">
+                    NEXT
+                  </button>
+                </div>
+
+                <div class="pt-5 col-lg-12 col-sm-12 order-lg-4 order-2 static d-flex justify-content-center align-items-center">
+                  <h4 class="small-font">Already have an account? <span>
+                      <a href="#"> Sign in </a>
+                      </sapn>
+                  </h4>
+                </div>
+              </div>
+            </fieldset>
+            <!-- sign-up 2nd screen ends -->
+
+            <!-- sign-up verify your mobile number screen starts -->
+            <fieldset>
+              <div class="row pt-5 pt-lg-4">
+                <div class="col-lg-12 mx-auto">
+                  <h5 class="card-content">
+                    Be a part of largest and most accurate online database on Taxation and Corporate Laws
+                  </h5>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-lg-6 mx-auto">
+                  <h2 class="fs_title pt-5 pb-4">Verify your mobile number</h2>
+                  <div class="form-group">
+                    <input type="text" id="number" class="form-control contact-feilds" name="fname" required />
+                    <label for="number" class="form-control-placeholder">Enter your mobile number</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="text" id="code" class="form-control contact-feilds" name="fname" required />
+                    <label for="code" class="form-control-placeholder">Enter 4 digits code</label>
+                  </div>
+
+                  <div class="pt-4 d-flex justify-content-lg-start justify-content-center align-items-center">
+
+                    <button type="button" name="next" class="next-up submit-cta mr-lg-5 mr-0" value="Next">
+                      NEXT
+                    </button>
+                    <a href="#" class="view-link des-resend">Resend code</a>
+                  </div>
+
+                  <div class="">
+                    <a href="#" class="view-link mob-resend mt-4 mx-auto">Resend code</a>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <!-- sign-up verify your mobile number screen ends -->
+
+            <!-- sign-up select your profeesion screen starts -->
+            <fieldset class="customize">
+              <div class="row pt-4">
+                <div class="col-lg-12">
+                  <h2 class="fs_title">Select State</h2>
+                </div>
+
+                <div class="col-lg-12 d-flex">
+                  <div class="form-group selectwrapper d-flex justify-content-between align-items-center">
+                    <select class="js-example-placeholder-single js-states form-control">
+                      <option value="Delhi">Delhi</option>
+                      <option value="Assam">Assam</option>
+                      <option value="Gujrat">Gujrat</option>
+                      <option value="Karnataka">Karnataka</option>
+                      <option value="Tamil Nadu">Tamil Nadu</option>
+                      <option value="Uttar Pradesh">Uttar Pradesh</option>
+                      <option value="Chennai">Chennai</option>
+                      <option value="Mumbai">Mumbai</option>
+                    </select>
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- for desktop starts -->
+              <div class="row des-profession">
+                <div class="col-lg-12 pt-2 pb-2">
+                  <h2 class="fs_title">Select your profession</h2>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Chartered Accountant
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+
+                <div class=" col-lg pro">
+                  <label class="check-container">Company Secretary
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Advocate
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Certified Management Accountant
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Indian Acts
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Student
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Professor
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Consultant
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro d-flex align-items-center">
+                  <label class="check-container">Other
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+
+                  <input type="text" name="" value="" class="other-search">
+                </div>
+              </div>
+              <!-- for desktop ends -->
+
+              <!-- for mobile starts -->
+              <div class="row mob-profession">
+                <div class="col-12">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle fs_title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select your profession
+
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="">
+                        <label class="check-container">Chartered Accountant
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+                      <a class="dropdown-item" href="">
+                        <label class="check-container">Company Secretary
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+                      <a class="dropdown-item" href="">
+                        <label class="check-container">Advocate
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="">
+                        <label class="check-container">Certified Management Accountant
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Indian Acts
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Student
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Professor
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Consultant
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Other
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+
+                        <input type="text" name="" value="" class="other-search">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- for mobile ends -->
+
+
+              <!-- for desktop starts -->
+              <div class="row des-profession">
+                <div class="col-lg-12 pt-5 pb-4">
+                  <h2 class="fs_title">Select your area of interest</h2>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Income tax
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class=" col-lg pro">
+                  <label class="check-container">Indirect tax
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">GST
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Accounts & Audit
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">FEMA, Banking & Insurance
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Company Law
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Competition Law
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Indian Acts
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">International Tax
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+
+                <div class="col-lg pro">
+                  <label class="check-container">Select All
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+              </div>
+              <!-- for desktop ends -->
+
+              <!-- for mobile starts -->
+              <div class="row mob-profession">
+                <div class="col-12">
+                  <div class="dropdown">
+                    <button class="btn dropdown-toggle fs_title" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select your area of interest
+
+                      <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Income Tax
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Indirect Tax
+                          <input type="checkbox" checked="checked">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">GST
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Accounts & Audit
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">FEMA, Banking & Insurance
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Company Law
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Competition Law
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Consultant
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+
+                      <a class="dropdown-item" href="#">
+                        <label class="check-container">Select All
+                          <input type="checkbox">
+                          <span class="checkmark"></span>
+                        </label>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- for mobile ends -->
+
+              <!-- for nexxt button -->
+              <div class="col-lg-12 pt-4 d-flex align-items-center justify-content-center">
+                <button type="button" name="next" class="next-up submit-cta" value="Next">
+                  NEXT
+                </button>
+              </div>
+            </fieldset>
+            <!-- sign-up select your profeesion screen ends -->
+
+            <!-- sign-up select your category screen starts -->
+            <fieldset class="customize">
+              <div class="row pt-0">
+                <div class="col-lg-12 mx-auto">
+                  <h5 class="card-content">
+                    Select any catergory as per your need </h5>
+                </div>
+              </div>
+
+              <div class="row pt-4">
+                <div class="col-lg-3 customize-cards">
+                  <a href="#">
+                    <div class="card text-center">
+                      <div class="taxtaion-img">
+                        <img class="" src="img/homepage-icons/research.png" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">RESEARCH</h5>
+                        <p class="card-text">Get real-time updates & the most authentic database of Case Laws, Acts, Rules, Circulars & Notifications, Articles and Commentary</p>
+                        <div class="btn green taxation-btn d-flex justify-content-center align-items-center">FREE TRIAL</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 customize-cards">
+                  <a href="#">
+                    <div class="card text-center">
+                      <div class="taxtaion-img">
+                        <img class="" src="img/homepage-icons/practice.png" alt="">
+                      </div>
+
+                      <div class="card-body">
+                        <h5 class="card-title">PRACTICE</h5>
+                        <p class="card-text">The biggest & most exhaustive set of solutions for Income Tax, GST and Company Law Practice in India</p>
+                        <div class="btn blue taxation-btn d-flex justify-content-center align-items-center">FREE TRIAL</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 customize-cards">
+                  <a href="#">
+                    <div class="card text-center">
+                      <div class="taxtaion-img">
+                        <img class="" src="img/homepage-icons/exams.png" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h5 class="card-title">EXAMS</h5>
+                        <p class="card-text">The most comprehensive learning & assessment platform for professional exams, specially personalised to you</p>
+                        <div class="btn magenta taxation-btn d-flex justify-content-center align-items-center">FREE TRIAL</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="col-lg-3 customize-cards">
+                  <a href="#">
+                    <div class="card text-center">
+                      <div class="taxtaion-img">
+                        <img class="" src="img/homepage-icons/compliance.png" alt="">
+                      </div>
+
+                      <div class="card-body">
+                        <h5 class="card-title">COMPLIANCE</h5>
+                        <p class="card-text">A completely automated and thorough solution for all your Income-tax compliances and XBRL filings in India</p>
+                        <div class="btn purple taxation-btn d-flex justify-content-center align-items-center">FREE TRIAL</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="col-lg d-flex justify-content-center align-items-center">
+                  <a href="#" class="view-link">Visit Bookstore</a>
+                </div>
+              </div>
+
+              <div class="row pt-3">
+                <div class="col-lg skip d-flex justify-content-center align-items-center">
+                  <a href="#" class="">Or Skip</a>
+                </div>
+              </div>
+            </fieldset>
+            <!-- sign-up select your category screen ends -->
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- inject:js -->
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="lib/main.js"></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.7/js/select2.min.js"></script>
+</body>
+
+
+</html>

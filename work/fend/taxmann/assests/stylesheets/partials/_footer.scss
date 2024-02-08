@@ -1,0 +1,128 @@
+footer {
+  background: $bg;
+  font-family: $font-futura;
+
+  .container {
+    padding: 5rem 0;
+    max-width: 87%;
+    @include mobile {
+      padding: 4rem 2rem;
+      max-width: 100%;
+    }
+
+    .footer-subcontent {
+      h5 {
+        font-size: 0.875rem;
+        letter-spacing: 0.02rem;
+        max-width: 65%;
+        line-height: 1.56rem;
+        margin-bottom: 0;
+        font-family: $font-futura;
+        font-weight: 400;
+        color: $grey;
+        @include mobile {
+          max-width: 100%;
+        }
+        @include tablet {
+          max-width: 90%;
+        }
+      }
+    }
+
+    .footer-heading {
+      padding: 0;
+      list-style-type: none;
+      margin-bottom: 0;
+      color: $grey;
+
+      a,
+      li {
+        font-size: 0.875rem;
+        letter-spacing: 0.02rem;
+        line-height: 1.56rem;
+        font-weight: 400;
+        color: $grey;
+      }
+
+      li {
+        &:first-child {
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          @include tablet {
+            line-height: 1rem;
+          }
+        }
+      }
+
+      a {
+        &:hover {
+          text-decoration: none;
+          color: #e47816;
+        }
+      }
+    }
+
+    .appstore {
+      img {
+        max-width: 7rem;
+        @include tablet {
+          max-width: 6rem;
+        }
+      }
+    }
+
+    .social-icons {
+      i {
+        color: $grey;
+        margin-right: 1.2rem;
+        font-size: 28px;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    .clients {
+      @include mobile {
+        max-width: 100%;
+      }
+
+      img {
+        max-width: 4.5rem;
+        margin: 0 0.5rem 0.5rem 0;
+        @include mobile {
+          max-width: 3.5rem;
+        }
+      }
+    }
+
+    .des-clients,
+    .des-version {
+      display: block;
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .mob-clients,
+    .mob-version {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+
+    .copyright {
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      line-height: 25px;
+    }
+  }
+}

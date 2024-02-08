@@ -1,0 +1,27 @@
+/* Safari 4.0 - 8.0 */
+
+@-webkit-keyframes myfirst {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  % {
+    left: 200px;
+    top: 0px;
+  }
+}
+
+/* Standard syntax */
+
+@keyframes myfirst {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 200px;
+    top: 0px;
+  }
+}

@@ -1,0 +1,33 @@
+.rti {
+  .rti-section {
+    .rti-card {
+      border: none;
+      box-shadow: 0 2px 4px 0 rgba(4,15,53,0.28);
+      border-radius: 4px;
+      .section-heading{
+        font-size: 1.125rem;
+        letter-spacing: 0.2px;
+      }
+      .card-body {
+        padding: 3rem 4rem;
+        @include mobile{
+          padding: 2rem 3rem;
+        }
+        .rti-heading{
+
+        }
+        .rti-links{
+          color: #2683D7;
+          font-size: 1rem;
+          li{
+            padding-bottom: 0.5rem;
+          }
+          .anchor-btn{
+            font-size: 1rem;
+            letter-spacing: 0.2px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,132 @@
+body {
+  font-family: $font-source;
+  background: $light-orange;
+  // font-family: $font-source;
+
+  a {
+    color: #000000;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  .container {
+    max-width: 1200px;
+    padding: 5rem 0;
+  margin: 0 auto;
+    @include s-mobile {
+      padding: 3rem 1rem !important;
+    }
+    @include mobile {
+  max-width: 100%;
+  min-width: 100%;
+      padding: 2rem;
+    }
+    @include tablet {
+  max-width: 100%;
+  min-width: 100%;
+      padding: 6rem 2rem;
+    }
+    @media screen and (min-width: 1024px) and (max-width: 1196px) {
+  max-width: 100%;
+  min-width: 100%;
+      padding: 6rem 3rem;
+    }
+  }
+
+  .small-text {
+    font-size: 0.875rem;
+    color: $grey-text;
+    font-family: $font-source;
+  }
+
+  .section-text {
+    font-size: 1rem;
+    color: $grey-text;
+    font-family: $font-source;
+    letter-spacing: 0.2px;
+    line-height: 25px;
+  }
+
+  .section-content {
+    font-size: 1rem;
+    color: $grey-text;
+    font-family: $font-source;
+    letter-spacing: 0.3px;
+  }
+
+  .section-heading {
+    font-size: 1.625rem;
+    color: $blue;
+    font-family: $font-noto;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+
+.section-heading-border{
+  @extend .section-heading;
+  border-bottom: 1px solid $orange;
+  display: inline;
+}
+
+  .font-14{
+    font-size: 0.875rem;
+  }
+
+  .font-16{
+    font-size: 1rem;
+  }
+
+  .font-18 {
+    font-size: 1.125rem;
+  }
+
+  .font-20 {
+    font-size: 1.25rem;
+  }
+
+  .font-noto {
+    font-family: $font-noto;
+  }
+
+  .font-source{
+    font-family: $font-source;
+  }
+
+  .font-500 {
+    font-weight: 500;
+  }
+
+  .font-600 {
+    font-weight: 600;
+  }
+
+  .font-grey {
+    color: $grey;
+  }
+
+  .font-orange {
+    color: $orange;
+  }
+
+  .bg-orange {
+    background: $orange;
+  }
+
+  .font-light-grey{
+    color: $grey-text;
+  }
+  .blue-text{
+    color: $blue;
+  }
+  .bg-light-blue {
+    background: $light-blue;
+  }
+
+  .text-muted{
+    color: #C8C8C8 !important;
+  }
+}
+

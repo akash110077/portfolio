@@ -1,0 +1,457 @@
+.circulars {
+  .circulars-search {
+    position: relative;
+    width: 75%;
+    @include tablet{
+      width: 60%;
+    }
+
+    input {
+      width: 100%;
+      border-radius: 1em;
+      box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+      padding: 0.3rem 1rem 0.3rem 2rem;
+      border: 1px solid $light-orange;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $orange;
+        box-shadow: none;
+      }
+
+      &::placeholder {
+        color: #bdbdbd;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 2%;
+      transform: translate(-2%,-50%);
+      @include mobile{
+        left: 4%;
+      }
+    }
+  }
+  .filter-bar {
+    .sidenav {
+      padding-top: 8rem;
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      right: 0;
+      background-color: #fff;
+      overflow-x: hidden;
+      transition: 0.5s;
+      margin-top: 0;
+
+      .closebtn {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 1.875rem;
+        margin-left: 50px;
+        color: $orange;
+      }
+    }
+
+    .circulars-dropdown {
+      width: 100%;
+      height: 2.3rem;
+      position: relative;
+
+      &::after {
+        content: "\f107";
+        font-family: "fontAwesome";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 5%;
+        font-size: 1.5rem;
+        color: $orange;
+        pointer-events: none;
+      }
+
+      .select-type {
+        width: 100%;
+        height: 100%;
+        -webkit-appearance: none;
+        background: #fff;
+        border-radius: 1.2em;
+        border: 1px solid $orange;
+        padding: 0.2rem 1rem;
+        color: $orange;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .sidenav {
+      .filter-row {
+        width: 70%;
+        margin: 0 auto;
+
+        .form-group {
+          &::after {
+            content: "";
+            background: url("../../img/calender.svg");
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 67%;
+            right: 5%;
+            height: 18px;
+            width: 18px;
+            transform: translate(-2%, 0);
+            pointer-events: none;
+          }
+
+          #datepicker_to-1 {
+            border-radius: 1.2em;
+            border: 1px solid $orange;
+            padding: 0.35rem 0.75rem 0.35rem 1.5rem;
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            color: $grey;
+
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+
+            &::placeholder {
+              color: $orange;
+            }
+          }
+
+          #datepicker_from-1 {
+            border-radius: 1.2em;
+            border: 1px solid $orange;
+            padding: 0.35rem 0.75rem 0.35rem 1.5rem;
+            height: 100%;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+            color: $grey;
+
+            &:focus {
+              outline: none;
+              box-shadow: none;
+            }
+
+            &::placeholder {
+              color: $orange;
+            }
+          }
+
+          &::after {}
+        }
+
+        .common-cta {
+          width: 10rem;
+          border-radius: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .filter-band {
+    width: 100%;
+    height: 4.5rem;
+    background: white;
+    border-top: 1px solid #e9e9e9;
+    position: fixed;
+    bottom: 0;
+    display: none;
+    box-shadow: 0 0 13px 0 rgba(7, 18, 53, 0.28);
+
+    .row {
+      height: 100%;
+
+      .band-div {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: $grey;
+      }
+    }
+  }
+
+  .floating-btn {
+    position: fixed;
+    bottom: 0.7rem;
+    right: 0.7em;
+    display: none;
+    @include mobile {
+      display: block;
+    }
+
+    .fa-filter {
+      background: $orange;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 6px 0 rgba(7, 18, 53, 0.78);
+    }
+  }
+
+  .filter-section {
+    @include mobile {
+      display: none;
+    }
+
+
+
+    .circulars-dropdown {
+      width: 24%;
+      position: relative;
+
+      &::after {
+        content: "\f107";
+        font-family: "fontAwesome";
+        display: inline-block;
+        position: absolute;
+        top: -2px;
+        right: 1rem;
+        font-size: 1.5rem;
+        color: $orange;
+        pointer-events: none;
+      }
+
+      .select-type {
+        width: 100%;
+        -webkit-appearance: none;
+        background: #fff;
+        border-radius: 1em;
+        border: 1px solid $light-orange;
+        padding: 0.2rem 1rem;
+        color: $grey;
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .date-input {
+      @include tablet {
+        justify-content: center;
+        padding-top: 2rem;
+      }
+
+      .form-group {
+        position: relative;
+
+        &::after {
+          content: "";
+          background: url("../../img/calender.svg");
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 50%;
+          left: 6%;
+          height: 18px;
+          width: 18px;
+          transform: translate(-2%, -50%);
+          pointer-events: none;
+          @include tablet {
+            top: 50%;
+            left: 7%;
+          }
+        }
+
+        #datepicker_from {
+          border-radius: 1.2em 0 0 1.2em;
+          border: 1px solid transparent;
+          padding: 0.4rem 0.75rem 0.4rem 2.5rem;
+          height: 100%;
+          border-right: none;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+          color: $orange;
+          box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+
+          &:focus {
+            outline: none;
+            box-shadow: none;
+            border: 1px solid $orange;
+            border-right: none;
+          }
+
+          &::placeholder {
+            color: $grey;
+          }
+        }
+
+        #datepicker_to {
+          border-radius: 0 1.2em 1.2em 0;
+          border: 1px solid transparent;
+          padding: 0.4rem 0.75rem 0.4rem 2.5rem;
+          height: 100%;
+          border-left: none;
+          cursor: pointer;
+          color: $orange;
+          box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+
+          &:focus {
+            outline: none;
+            border: 1px solid $orange;
+            box-shadow: none;
+            border-left: none;
+          }
+
+          &::placeholder {
+            color: $grey;
+          }
+        }
+      }
+
+      .small-border {
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 6%;
+        }
+      }
+    }
+    .common-cta {
+      width: 18%;
+    }
+  }
+
+  .circulars-table {
+    table {
+      width: 100%;
+      background: #FFFFFF;
+      color: $grey;
+      box-shadow: 0 2px 4px 0 rgba(4, 15, 53, 0.28);
+      @include mobile {
+        display: block;
+        background: none;
+        box-shadow: none;
+      }
+
+      thead {
+        background: $light-blue;
+        color: $grey;
+        font-size: 1.25rem;
+        @include mobile {
+          display: block;
+        }
+
+        tr {
+          @include mobile {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+          }
+
+          th {
+            width: 1%;
+            padding-left: 1rem;
+            padding-top: 1rem;
+            font-weight: 600;
+          }
+        }
+      }
+
+      tbody {
+        @include mobile {
+          display: block;
+        }
+      }
+
+      th {
+        @include mobile {
+          display: block;
+        }
+      }
+
+      td {
+        vertical-align: top;
+        @include mobile {
+          display: block;
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+          padding-left: 50%;
+          padding-bottom: 1rem;
+          white-space: normal;
+          text-align: left;
+
+          &::before {
+            content: attr(data-title);
+            position: absolute;
+            top: 35%;
+            left: 5%;
+            width: 45%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+            font-weight: bold;
+          }
+        }
+      }
+
+      tr {
+        border-bottom: 1px solid #DEDEDE;
+
+        &:nth(last-child) {
+          border: none;
+        }
+        @include mobile {
+          display: block;
+          margin-bottom: 1rem;
+          background: #FFFFFF;
+          box-shadow: 0 2px 4px 0 rgba(4, 15, 53, 0.28);
+        }
+      }
+
+      .view-link {
+        color: #2683D7;
+        margin-left: 0;
+        font-size: 1rem;
+
+        &:hover {
+          color: #2683D7;
+
+          &::after {
+            background-color: #2683D7;
+          }
+        }
+
+        &::after {
+          background-color: #2683D7;
+        }
+      }
+    }
+  }
+}
+
+.datepicker {
+  table {
+    tr {
+      .today {
+        background-color: $orange !important;
+        background-image: none !important;
+        color: #FFFFFF !important ;
+      }
+    }
+  }
+}

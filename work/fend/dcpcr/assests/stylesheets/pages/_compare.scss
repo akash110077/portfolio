@@ -1,0 +1,346 @@
+.compare {
+  .container{
+    @include s-mobile{
+      padding: 0 !important;
+    }
+  }
+  .font-18 {
+    @include mobile {
+      font-size: 0.875rem;
+    }
+  }
+
+  .font-16 {
+    @include mobile {
+      font-size: 0.81rem;
+    }
+  }
+
+  .top-cta {
+    .common-cta-invert {
+      width: 7%;
+      @include mobile {
+        width: 30%;
+      }
+      @include tablet {
+        width: 20%;
+      }
+    }
+  }
+
+  .compare-cards {
+    background: #354ECA;
+    @include mobile {
+      position: relative;
+    }
+
+    .container {
+      @include mobile {
+        padding: 5rem 1.5rem 1rem;
+      }
+    }
+
+    .section-content {
+      font-family: $font-source;
+      font-weight: 100;
+      letter-spacing: 0.3px;
+    }
+
+    .school-card {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-end;
+      @include mobile {
+        width: 100%;
+        height: 95%;
+      }
+      @include tablet {
+        margin-bottom: 2rem;
+        height: 100%;
+      }
+
+      .card-body {
+        width: 100%;
+        background: #FFFFFF;
+        @include mobile{
+          padding: 2.5rem 1.5rem 1rem 1.5rem;
+          height: 8rem;
+        }
+        @include tablet{
+          height: 10rem;
+        }
+
+        }
+        .card-footer{
+          border: none;
+          @include mobile{
+            height: 8rem;
+          }
+          @include tablet{
+            height: 7rem;
+          }
+          .school-search {
+            border: 1px solid $orange;
+            border-radius: 1em;
+            padding: 0.1rem 0.8rem;
+
+            &::placeholder {
+              color: $orange;
+            }
+
+            &:focus {
+              outline: none;
+            }
+            @include mobile {
+              display: none;
+            }
+          }
+        }
+
+
+
+      .select-area {
+        position: relative;
+
+        &::after {
+          content: "\f107";
+          font-family: "fontAwesome";
+          display: inline-block;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.5rem;
+          color: $orange;
+          pointer-events: none;
+          cursor: pointer;
+          @include mobile {
+            right: 0;
+            top: 8px;
+          }
+        }
+
+        .select-zone {
+          width: 100%;
+          margin-top: 1rem;
+          -webkit-appearance: none;
+          border: none;
+          border-radius: 0;
+          border-bottom: 1px solid #706DB1;
+          padding: 0 0.5rem;
+          font-size: 1.125rem;
+          color: $blue;
+          @include mobile {
+            padding: 0 1rem 0 0;
+            font-size: 0.875rem;
+            background: transparent;
+          }
+          @include tablet {
+            font-size: 1rem;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+
+      .add-school-box{
+        height: 100%;
+        width: 100%;
+        .add-school {
+          width: 40%;
+          height: 70%;
+          @include mobile {
+            width: 97%;
+            height: 90%;
+            padding: 18% 0;
+          }
+          @include tablet {
+            width: 43%;
+            height: 90%;
+          }
+        }
+      }
+
+    }
+
+    .compare-search {
+      position: relative;
+
+      .compare-input {
+        opacity: 1;
+        width: 100%;
+        border-radius: 1.5em;
+        border: 1px solid #BDBDBD;
+        position: static;
+        padding: 0.3rem 1rem 0.3rem 2rem;
+        font-size: 0.875rem;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $orange;
+        }
+      }
+
+      img {
+        width: 1rem;
+        position: absolute;
+        top: 50%;
+        left: 4%;
+        transform: translate(-4%, -50%);
+        @include tablet {
+          left: 2%;
+        }
+      }
+    }
+
+    .cards-row {
+      overflow-x: scroll;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .mob-search-input {
+      position: absolute;
+      top: -3rem;
+      left: 0;
+    }
+
+    .exit-link {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+
+  }
+
+}
+
+.disabled-cta {
+  background: #BDBDBD;
+
+  &:hover {
+    background: #BDBDBD;
+    color: #FFFFFF;
+    border: none;
+  }
+}
+
+.compare-school-table {
+  .table-scroll-custom-2 {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .table-wrap-2 {
+      width: 100%;
+      overflow: auto;
+    }
+
+    table {
+      width: 100%;
+      margin: auto;
+      // border-collapse: separate;
+      border-spacing: 0;
+      @include mobile {
+        width: 130%;
+      }
+
+      tbody {
+        &:nth-child(7) {
+          border-bottom: none;
+        }
+      }
+    }
+
+    td{
+      padding: 20px 10px;
+      padding-left: 1.5rem;
+      background: transparent;
+      vertical-align: top;
+      width: 25%;
+      border-bottom: 1px solid #dedede;
+    }
+    th {
+      padding: 20px 10px;
+      background: transparent;
+      vertical-align: top;
+      width: 25%;
+      border-bottom: 1px solid #dedede;
+    }
+
+    th {
+      @include mobile {
+        visibility: hidden;
+      }
+    }
+
+    thead {
+      background: $light-blue;
+    }
+
+    .clone-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .clone-2 td,
+    .clone-2 th {
+      visibility: hidden;
+    }
+
+    .clone-2 td,
+    .clone-2 th {
+      border-color: 1px solid #dedede;
+      background: #fff9f6;
+    }
+
+    .clone-2 tbody th {
+      visibility: visible;
+      color: $light-blue;
+    }
+
+    .clone-2 .fixed-side {
+      visibility: visible;
+    }
+
+    .clone-2 tfoot,
+    .clone-2 thead {
+      background: $light-blue;
+    }
+  }
+
+  .common-cta {
+    @include mobile {
+      width: 6rem;
+    }
+  }
+}
+
+.headerp {
+  // background: #fff;
+  position: relative;
+  z-index: 999;
+
+  &::after {
+    content: " ";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    z-index: -1;
+  }
+
+}

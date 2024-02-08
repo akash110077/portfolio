@@ -1,0 +1,281 @@
+.practice-unsign {
+  .navbar {
+    .container {
+      .sign-in {
+        &:hover {
+          color: $blue !important;
+        }
+      }
+
+      .sign-up {
+        a {
+          background: $blue !important;
+
+          &:hover {
+            background-color: #0E74CC !important;
+          }
+        }
+      }
+
+      .r-cta {
+        border: 1px solid $blue;
+        background: $blue;
+      }
+
+      .cta-small {
+        color: $blue;
+        border: 1px solid $blue;
+      }
+
+      .dropdown-item {
+        &:hover {
+          background-color: #EAF4F8 !important;
+          border-left: 4px solid $blue !important;
+        }
+      }
+      .search-input{
+        &:focus{
+          border: 1px solid $blue;
+        }
+      }
+    }
+  }
+
+  .features {
+    .container {
+      .features-btn {
+        background: $blue !important;
+
+        &:hover {
+          background-color: #0E74CC !important;
+        }
+      }
+
+      .features-content {
+        ul {
+          li {
+            background-image: url("../../img/practice/blue-bullets.png");
+          }
+        }
+      }
+    }
+  }
+
+  .news {
+    .container {
+      .news-btn {
+        background: $blue;
+
+        &:hover {
+          border: 1px solid $blue;
+          background: #fff;
+          color: $blue;
+        }
+      }
+
+      .owl-prev {
+        color: $blue;
+
+        &:hover {
+          background: $blue;
+
+          .blue-text {
+            color: #fff !important;
+          }
+        }
+      }
+
+      .owl-next {
+        color: $blue;
+
+        &:hover {
+          background: $blue;
+
+          .blue-text {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+
+  .banner {
+    background-color: #EAF4F8;
+
+    .container {
+      .trial-btn {
+        background: $blue !important;
+
+        &:hover {
+          background-color: #0E74CC !important;
+        }
+      }
+
+      .trial-input:focus {
+        border: 1px solid $blue;
+      }
+    }
+  }
+
+  .view-all {
+    background: $blue;
+
+    &:hover {
+      border: 1px solid $blue;
+      background: #ffffff;
+      color: $blue;
+    }
+  }
+
+  .offers {
+    background: #EAF4F8;
+
+    .container {
+      .item {
+        .card {
+          .card-body {
+            .card-link {
+              color: $blue;
+            }
+          }
+        }
+      }
+    }
+
+    .users {
+      background: #EAF4F8;
+    }
+  }
+
+  .products {
+    .container {
+      a {
+        .product-cards {
+          .card-body {
+            .cta-green {
+              background: $blue;
+
+              &:hover {
+                border: 1px solid $blue;
+                background: #ffffff;
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .stories {
+    .container {
+      .card {
+        .card-body {
+          .profile {
+            img {
+              margin: auto;
+            }
+
+            .profile-details {
+              text-align: center;
+              margin: auto;
+
+              h3 {
+                color: $blue;
+              }
+            }
+          }
+        }
+      }
+
+      .owl-prev {
+        &:hover {
+          background: $blue;
+
+          .blue-text {
+            color: #fff !important;
+          }
+        }
+      }
+
+      .owl-next {
+        &:hover {
+          background: $blue;
+
+          .blue-text {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+  footer{
+    .container{
+      .footer-heading{
+        a{
+          &:hover{
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
+
+.practice {
+  .des-filter-section {
+    background: $light-blue;
+  }
+
+  .added-filter {
+    border: 1px solid $blue !important;
+  }
+
+  .alerts {
+    .container {
+      background: $light-blue;
+
+      .alerts-heading {
+        font-weight: 400;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          background: #E3EAF2;
+          height: 1px;
+          top: 4rem;
+          left: 0;
+        }
+
+        &:last-child {
+          &::after {
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+  // practice-faq
+  .practice-faq {
+    background: $white;
+
+    .faq-search {
+      border: 1px solid #BBC9D5;
+      border-radius: 2rem;
+      width: 100%;
+      background: #ECF5FD;
+      height: 36px;
+      padding: 1rem;
+
+      &:focus {
+        outline: 0;
+        border: 1px solid $blue;
+      }
+    }
+  }
+
+  .practice-tax {
+    background: #EAECF0;
+  }
+}

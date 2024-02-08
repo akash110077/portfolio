@@ -1,0 +1,284 @@
+footer {
+  padding: 20px 0 30px;
+  background-color: #ebeae0;
+  width: 100%;
+  margin: 0 auto;
+  @include mobile {
+    padding: 0;
+  }
+  @include tablet {
+    padding: 0;
+  }
+  @include tablet-landscape {
+    padding: 20px 0 30px;
+    background-color: #ebeae0;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .containers {
+    width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+    list-style: none;
+    min-height: 80px;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: none;
+    }
+    @include tablet-landscape {
+      display: block;
+    }
+
+    li {
+      min-height: 80px;
+      width: 280px;
+      float: left;
+      display: inline-block;
+      padding: 0 20px;
+
+      .textcontent {
+        min-height: 80px;
+        width: 240px;
+        float: left;
+
+        .header.first {
+          margin: 0 0 5px;
+        }
+
+        .header {
+          font-weight: bold;
+          margin: 15px 0 5px;
+          font-family: Arial,Helvetica,sans-serif;
+          color: #000;
+          width: 100%;
+          float: left;
+          margin: 0 0 1px;
+          text-decoration: none;
+          text-align: left;
+          padding-top: 1rem;
+          font-size: 0.75rem;
+        }
+
+        a {
+          font-size: 10px;
+          font-family: Arial,Helvetica,sans-serif;
+          color: #666;
+          width: 100%;
+          float: left;
+          margin: 0 0 1px;
+          text-decoration: none;
+          text-align: left;
+
+          &:hover {}
+        }
+      }
+
+      fieldset {
+        width: 260px;
+        float: left;
+        border: 0;
+        margin: 0;
+        padding: 0;
+
+        label {
+          width: 100%;
+          float: left;
+          margin: 10px 0;
+          font-size: 10px;
+          font-family: Arial,Helvetica,sans-serif;
+          color: #FFF;
+        }
+
+        form {
+          position: relative;
+
+          &::before {
+            background-image: url("../../img/selectionarrow-footer.png");
+            content: "";
+            position: absolute;
+            right: 2em;
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            top: 2.6em;
+            transition: 0.4s all ease-in-out;
+            background-size: 9px 15px;
+            z-index: 0;
+          }
+        }
+
+        select {
+          width: 14rem;
+          height: 1.875rem;
+          border: 0;
+          border-radius: 0;
+          outline: 0;
+          -webkit-appearance: button;
+          padding-left: 1em;
+          font-size: 0.625rem !important;
+          color: #666;
+
+          &::-ms-expand {
+            display: none;
+          }
+        }
+
+        .selector {
+          font-size: 12px;
+          line-height: 30px;
+          height: 30px;
+          padding: 0 0 0 10px;
+          position: relative;
+          overflow: hidden;
+          margin: 0;
+
+          span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            height: 30px;
+            line-height: 30px;
+            cursor: pointer;
+            display: block;
+            color: #666;
+            text-shadow: 0 1px 0 #fff;
+            background-image: url("../img/sprites.png");
+            background-position: -31px 0;
+            background-repeat: no-repeat;
+            -webkit-font-smoothing: antialiased;
+          }
+        }
+      }
+
+      .mtop {
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .first {
+      padding: 0;
+      width: 500px;
+    }
+
+    .second {
+      padding: 0 30px;
+      width: 450px;
+
+      .textcontent {
+        width: 365px;
+        margin-left: 4rem;
+      }
+    }
+
+    .socialLinks {
+      .social-share {
+        display: inline-flex;
+
+        .tablerow {
+          margin-right: 10px;
+          line-height: 0;
+
+          .fa-twitter {
+            font-size: 19px;
+            height: 26px;
+            width: 26px;
+            text-align: center;
+            background: white;
+            padding: 0.2rem;
+            color: #1da1f2;
+          }
+
+          .fa-linkedin {
+            font-size: 22px;
+            height: 26px;
+            width: 26px;
+            text-align: center;
+            background: white;
+            padding: 0.2rem;
+            color: white;
+            background: #0077B5;
+          }
+
+          .fa-facebook {
+            font-size: 25px;
+            height: 26px;
+            width: 26px;
+            text-align: center;
+            background: white;
+            padding: 0.2rem;
+            color: #4267b2;
+            padding-bottom: 0;
+            padding-left: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .middleContainer {
+    max-width: 975px !important;
+    text-align: center;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 10px;
+    color: #959595;
+    line-height: 22px;
+    width: 100%;
+    margin: 4rem auto 0;
+    padding-top: 1.5rem;
+    @include mobile {
+      padding-right: 0;
+      margin: 0;
+      line-height: 1.2em;
+      text-align: left;
+      padding: 10px 15px;
+      color: #666;
+    }
+    @include tablet {
+      padding-right: 0;
+      margin: 0;
+      line-height: 1.2em;
+      text-align: left;
+      padding: 10px 15px;
+      color: #666;
+    }
+    @include tablet-landscape {
+      margin: 5rem auto 0;
+      line-height: 1.2em;
+      text-align: center;
+      padding: 1.5rem 15px 10px;
+      color: #666;
+    }
+
+    .mobile-show {
+      display: none;
+      @include mobile {
+        display: inline !important;
+        font-size: 13px;
+      }
+      @include tablet {
+        display: inline !important;
+        font-size: 13px;
+      }
+      @include tablet-landscape {
+        display: none !important;
+      }
+    }
+
+    a {
+      display: inline;
+      margin: 0 5px;
+      font-family: Arial,Helvetica,sans-serif;
+      font-size: 10px;
+      color: #666;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

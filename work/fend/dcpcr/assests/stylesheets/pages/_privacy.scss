@@ -1,0 +1,44 @@
+.privacy {
+  .privacy-content {
+    .section-heading {
+      span {
+        border-bottom: 1px solid $orange;
+      }
+    }
+
+    .privacy-card {
+      border: none;
+
+      .card-body {
+        background: #FFFFFF;
+        box-shadow: 0 2px 4px 0 rgba(4,15,53,0.28);
+        border-radius: 4px;
+        padding: 2rem 3rem;
+        @include mobile {
+          padding: 1.25rem;
+        }
+
+        .privacy-content-box {
+          padding-bottom: 1.5rem;
+
+          &:last-child {
+            padding-bottom: 0;
+          }
+
+          .privacy-title {
+            font-family: $font-noto;
+            font-size: 1.125rem;
+            color: $blue;
+            letter-spacing: 0.2px;
+          }
+
+          .section-content {
+            font-family: $font-source;
+            letter-spacing: 0.2px;
+            line-height: 23px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+header {
+  font-family: $font-noto;
+  width: 100%;
+  // max-width: 1024px;
+
+  .navbar {
+    padding: 0 1rem;
+    height: 5rem;
+    border: 1px solid #E6E6E6;
+
+    .nav-link-box {
+      width: 33.3%;
+      @include mobile {
+        width: 100%;
+        @media screen and (orientation: landscape){
+          width: 100%;
+        }
+      }
+
+      @include tablet {
+        width: 100%;
+        @media screen and (orientation: landscape){
+          width: 100%;
+        }
+      }
+
+      .nav-item {
+        @include mobile {
+          padding: 1rem 0;
+        }
+
+        .nav-link {
+          color: $blue !important;
+          font-size: 0.875rem;
+
+          &:hover {
+            color: $orange !important;
+          }
+        }
+
+        .dropdown-toggle {
+          &::after {
+            margin-left: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .dropdown-menu {
+      padding: 0;
+      @include mobile {
+        border: none;
+      }
+      @include tablet {
+        border: none;
+      }
+
+      .dropdown-item {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+
+        &:hover {
+          background: $light-blue;
+        }
+
+        a {
+          color: $blue;
+          display: block;
+        }
+      }
+
+      .dropdown-divider {
+        margin: 0;
+      }
+    }
+
+    .search-input {
+      padding: 0 1rem 0 2.5rem !important;
+      width: 14.5rem;
+      height: 2.4375rem;
+      background: #FFFFFF;
+      box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.19);
+      border-radius: 1.75rem;
+      letter-spacing: 0.35px;
+      margin-right: 2.5rem;
+
+      &::placeholder {
+        color: #BDBDBD;
+        font-family: $font-noto;
+        font-size: 14px;
+      }
+
+      &:focus {
+        border: 1px solid $blue;
+      }
+    }
+
+    .search-icon {
+      width: 1rem;
+      position: absolute;
+      left: 1rem;
+    }
+
+    .nav-link-box-2 {
+      width: 25.5rem;
+      @include mobile {
+        width: 100%;
+      }
+
+      .navbar-nav {
+        @include mobile {
+          align-items: flex-start !important;
+        }
+        @include tablet {
+          align-items: flex-start !important;
+        }
+
+        .nav-link {
+          color: $blue !important;
+          font-size: 0.875rem;
+
+          &:hover {
+            color: $orange !important;
+          }
+        }
+      }
+
+      .aap-logo {
+        width: 7rem;
+      }
+
+      .dcpcr-logo {
+        width: 4rem;
+      }
+    }
+    /* nav-toggler */
+    .nav-toggler {
+      width: 30px;
+      height: 30px;
+      position: relative;
+      cursor: pointer;
+      display: none;
+      margin-top: 0.5rem;
+
+      &:focus {
+        outline: none;
+      }
+      @include mobile {
+        display: block;
+        -webkit-appearance: none;
+        background: #fff;
+        border: none;
+        @media screen and (orientation: landscape){
+          display: block;
+          -webkit-appearance: none;
+          background: #fff;
+          border: none;
+        }
+      }
+      @include tablet {
+        display: block;
+        -webkit-appearance: none;
+        background: #fff;
+        border: none;
+        @media screen and (orientation: landscape){
+          display: block;
+          -webkit-appearance: none;
+          background: #fff;
+          border: none;
+        }
+      }
+    }
+
+    .nav-toggler span {
+      background-color: $blue;
+      position: absolute;
+      border-radius: 2px;
+      transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+      width: 22px;
+      height: 2px;
+      transition-duration: 500ms;
+    }
+
+    .nav-toggler span:nth-child(1) {
+      top: 12%;
+      left: 0;
+    }
+
+    .nav-toggler span:nth-child(2) {
+      top: 29%;
+      left: 0;
+      opacity: 1;
+    }
+
+    .nav-toggler span:nth-child(3) {
+      top: 45%;
+      left: 0;
+    }
+
+    .nav-toggler.open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 13px;
+    }
+
+    .nav-toggler.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggler.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 13px;
+    }
+
+    .navbar-collapse {
+      @include mobile {
+        background-color: #ffffff;
+        z-index: 1;
+        position: absolute;
+        top: 5rem;
+        left: 0;
+        padding: 0 1.6rem 1.6rem;
+        width: 100%;
+        height: 100vh;
+      }
+      @include tablet {
+        background-color: #ffffff;
+        z-index: 1;
+        position: absolute;
+        top: 5rem;
+        left: -1px;
+        padding: 0 1.6rem 1.6rem;
+        width: 100.4%;
+        height: 100vh;
+      }
+    }
+  }
+}

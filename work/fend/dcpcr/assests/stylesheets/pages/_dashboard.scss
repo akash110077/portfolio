@@ -1,0 +1,1332 @@
+.dashboard {
+  .school-cards-section {
+
+    .school-checkbox-card {
+      min-width: 20%;
+      max-width: 20%;
+      @include mobile {
+        min-width: 50%;
+        max-width: 50%;
+
+        &:nth-child(n+3) {
+          padding-top: 2rem;
+        }
+      }
+      @include tablet {
+        min-width: 25%;
+        max-width: 25%;
+        &:nth-child(n+5) {
+          padding-top: 2rem;
+        }
+      }
+
+      &:nth-child(n+5) {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &:nth-child(n+6) {
+        padding-top: 2rem;
+      }
+
+      .school-card {
+        box-shadow: 0 3px 8px 0 rgba(73,73,73,0.13);
+        border-radius: 4px;
+        // border: 1px solid transparent;
+        &:hover {
+          cursor: pointer;
+        }
+
+        .card-img-top {
+          width: 50%;
+        }
+
+        .card-body {
+          background: #F6F8FA;
+          padding: 0.7rem;
+          border-radius: 3px;
+
+          .small-text {
+            line-height: 21.6px;
+            @include mobile {
+              margin: 0;
+            }
+
+            b {
+              font-family: $font-noto;
+              color: $grey !important;
+            }
+          }
+        }
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        transform: translate(0%, 12%);
+        height: 15px;
+        width: 15px;
+        border: 1px solid $blue;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .check-container{
+        cursor: pointer;
+      }
+      .check-container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      /* When the checkbox is checked, add a blue background */
+      .check-container input:checked ~ .checkmark {
+        background-color: $blue;
+      }
+      /* Create the checkmark/indicator (hidden when not checked) */
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      /* Show the checkmark when checked */
+      .check-container input:checked ~ .checkmark:after {
+        display: block;
+      }
+      /* Style the checkmark/indicator */
+      .check-container .checkmark:after {
+        left: 4px;
+        top: 0;
+        width: 5px;
+        height: 12px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+
+    .card-border {
+      border: 1px solid $blue;
+    }
+
+  }
+
+  .sdi-score {
+    background: $light-blue;
+
+    .sdi-card {
+      min-width: 20%;
+      max-width: 20%;
+
+      &:nth-child(n+6) {
+        padding-top: 3rem;
+      }
+
+      @include mobile {
+        min-width: 50%;
+        max-width: 50%;
+        &:nth-child(n+3) {
+          padding-top: 2rem;
+        }
+      }
+      @include tablet {
+        min-width: 25%;
+        max-width: 25%;
+        &:nth-child(n+5) {
+          padding-top: 2rem;
+        }
+      }
+
+
+
+      .card {
+        background: none;
+        border: none;
+
+        .card-img-top {
+          width: 4rem;
+        }
+
+        .card-body {
+          .sdi-score-heading {
+            font-size: 1.25rem;
+            color: $grey;
+            font-family: $font-noto;
+          }
+
+          .sdi-score-text {
+            color: $grey-text;
+            font-size: 1rem;
+            font-family: $font-noto;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .heat-map {
+    .small-text {
+      letter-spacing: 0.3px;
+      font-size: 1rem;
+      @include mobile {
+        width: 100%;
+        font-size: 0.875rem;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .text-list {
+      list-style: none;
+      font-size: 0.75rem;
+      font-family: $font-source;
+      color: #797979;
+    }
+
+    .toggle-switch {
+      @include mobile{
+        background: #FFFFFF;
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1rem;
+      }
+      @include tablet{
+        background: #FFFFFF;
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 1rem;
+      }
+      .radio-toggle{
+        width: 15rem;
+        height: 100%;
+        background: white;
+        border-radius: 1rem;
+        box-shadow: inset 0 0 5px 0 rgba(0, 0, 0, 0.19);
+      }
+      .has-toggle-input label, .has-toggle-input.radio label {
+        float:left;
+        padding:0.3rem 1.5rem;
+        // background: #FFFFFF;
+        color: $orange;
+        cursor:pointer;
+        // box-shadow: inset 0 0 5px 0 rgba(0,0,0,0.19);
+      }
+      .label-1{
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        text-align: center;
+      }
+      .label-2{
+        border-radius: 1rem;
+        font-size: 0.875rem;
+        text-align: center;
+      }
+      .has-toggle-input label.active {
+        background: $orange;
+        color:white;
+        box-shadow: none;
+        box-shadow: 1px 4px 5px 0 rgba(0,0,0,0.22);
+      }
+    }
+
+    .content {
+      overflow: hidden;
+
+      .content-1 {
+        img {
+          width: 20rem;
+        }
+
+        .highcharts-legend {
+          display: none;
+        }
+
+        .highcharts-exporting-group {
+          display: none;
+        }
+
+        .highcharts-background {
+          fill: #FFF9F6;
+        }
+
+        .highcharts-title {
+          display: none;
+        }
+
+        .highcharts-credits {
+          display: none;
+        }
+
+        .highcharts-color-0 {
+          fill: #485698;
+          stroke: none;
+        }
+
+        .highcharts-color-1 {
+          fill: #8E85E7;
+          stroke: none;
+        }
+
+        .highcharts-color-2 {
+          fill: #A34CB7;
+          stroke: none;
+        }
+
+        .highcharts-color-3 {
+          fill: #F18D6B;
+          stroke: none;
+        }
+
+        .highcharts-container {
+          // width: 100% !important;
+          // height: 100% !important;
+          @include mobile {
+            width: 300px !important;
+            height: 200px !important;
+          }
+        }
+
+        .highcharts-root {
+          width: 100%;
+          height: 100%;
+        }
+
+        .pie-district {
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+        }
+
+        .highcharts-data-label-color-0 {
+          text {
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+
+            tspan {
+              fill: #fff;
+              stroke: none;
+            }
+          }
+        }
+
+        .highcharts-data-label-color-1 {
+          text {
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+
+            tspan {
+              fill: #fff;
+              stroke: none;
+            }
+          }
+        }
+
+        .highcharts-data-label-color-2 {
+          text {
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+
+            tspan {
+              fill: #fff;
+              stroke: none;
+            }
+          }
+        }
+
+        .highcharts-data-label-color-3 {
+          text {
+            font-size: 1rem !important;
+            font-weight: 500 !important;
+
+            tspan {
+              fill: #fff;
+              stroke: none;
+            }
+          }
+        }
+      }
+    }
+
+    .map-box {
+      @include mobile {
+        display: none !important;
+      }
+
+      @include tablet {
+        display: none !important;
+      }
+
+      #dynamic-heat-map {
+        path {
+          .tooltip > .tooltip-inner {
+            background-color: $blue;
+          }
+
+          &:hover {
+            fill: #f6ba91;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .tooltip {
+        z-index: 0;
+
+        .tooltip-inner {
+          background: $blue;
+          padding: 0.8rem;
+        }
+
+        .arrow {
+          &::before {
+            border-top-color: $blue;
+          }
+        }
+      }
+
+      .fill-orange {
+        fill: #f6ba91;
+      }
+    }
+    .indicators-group {
+      width: 80%;
+      @include mobile {
+        width: 100%;
+      }
+
+      .indicator-box {
+        .indicator {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          @include mobile {
+            width: 1.3rem;
+          }
+        }
+
+        &:nth-child(1) .indicator {
+          background: #8E85E7;
+        }
+
+        &:nth-child(2) .indicator {
+          background: #F18D6B;
+        }
+
+        &:nth-child(3) .indicator {
+          background: #A34CB7;
+        }
+
+        &:nth-child(4) .indicator {
+          background: #485698;
+        }
+      }
+    }
+  }
+
+  .parent-index {
+    background: $light-blue;
+
+    .small-text {
+      width: 75%;
+      @include mobile {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .highcharts-background {
+      fill: $light-blue;
+    }
+
+    .highcharts-exporting-group {
+      display: none;
+    }
+
+    .highcharts-title {
+      display: none;
+    }
+
+    .highcharts-subtitle {
+      display: none;
+    }
+
+    .highcharts-yaxis {
+      display: none;
+    }
+
+    .highcharts-credits {
+      display: none;
+    }
+
+    .highcharts-color-0 {
+      fill: #F18D6B;
+      cursor: pointer;
+    }
+
+    .highcharts-color-1 {
+      fill: #8E85E7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-2 {
+      fill: #485698;
+      cursor: pointer;
+    }
+
+    .highcharts-color-3 {
+      fill: #A34CB7;
+      cursor: pointer;
+    }
+
+    .highcharts-yaxis-grid {
+      .highcharts-grid-line {
+        stroke: #fff;
+      }
+    }
+
+    .highcharts-axis-line {
+      stroke: #fff;
+    }
+
+    .highcharts-data-label-color-0 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-1 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-2 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-3 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-xaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-yaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+  }
+
+  .teaching-index {
+    .teaching-index-text {
+      width: 100%;
+    }
+
+    .average-text {
+      width: 30%;
+      @include mobile {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .highcharts-background {
+      fill: $light-orange;
+    }
+
+    .highcharts-exporting-group {
+      display: none;
+    }
+
+    .highcharts-title {
+      display: none;
+    }
+
+    .highcharts-subtitle {
+      display: none;
+    }
+
+    .highcharts-yaxis {
+      display: none;
+    }
+
+    .highcharts-credits {
+      display: none;
+    }
+
+    .highcharts-color-0 {
+      fill: #FA6F3F;
+      cursor: pointer;
+    }
+
+    .highcharts-color-1 {
+      fill: #F18D6B;
+      cursor: pointer;
+    }
+
+    .highcharts-color-2 {
+      fill: #A34CB7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-3 {
+      fill: #8E85E7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-4 {
+      fill: #485698;
+      cursor: pointer;
+    }
+
+    .highcharts-color-5 {
+      fill: #81C2E4;
+      cursor: pointer;
+    }
+
+    .highcharts-color-6 {
+      fill: #83337A;
+      cursor: pointer;
+    }
+
+    .highcharts-yaxis-grid {
+      .highcharts-grid-line {
+        stroke: #DEDEDE;
+      }
+    }
+
+    .highcharts-axis-line {
+      stroke: #DEDEDE;
+    }
+
+    .highcharts-data-label-color-0 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-1 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-2 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-3 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-4 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-5 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-6 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-xaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-yaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .class-10 {
+      .indicators {
+        width: 90%;
+        @include mobile {
+          width: 100%;
+        }
+
+        .indicator-1 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #8E85E7;
+        }
+
+        .indicator-2 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #5260A6;
+        }
+
+        .indicator-3 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #9C58E7;
+        }
+
+        .indicator-4 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #72BFE7;
+        }
+      }
+    }
+
+    .class-12 {
+      .indicators {
+        width: 90%;
+        @include mobile {
+          width: 100%;
+        }
+        @include tablet {
+          width: 100%;
+        }
+
+        .indicator-1 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #F9794D;
+        }
+
+        .indicator-2 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #FF8D3D;
+        }
+
+        .indicator-3 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #F75F28;
+        }
+
+        .indicator-4 {
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          background: #FAB655;
+        }
+      }
+    }
+
+    .donutpie-1 {
+      @include mobile{
+        height: 350px;
+      }
+      .highcharts-title {
+        display: none;
+      }
+
+      .highcharts-exporting-group {
+        display: none;
+      }
+
+      .highcharts-background {
+        fill: transparent;
+      }
+
+      .highcharts-data-label-color-0 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-1 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-2 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-3 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-connector {
+        display: none;
+      }
+
+      .highcharts-color-0 {
+        fill: #5260A6;
+        stroke: none;
+      }
+
+      .highcharts-color-1 {
+        fill: #72BFE7;
+        stroke: none;
+      }
+
+      .highcharts-color-2 {
+        fill: #9C58E7;
+        stroke: none;
+      }
+
+      .highcharts-color-3 {
+        fill: #8E85E7;
+        stroke: none;
+      }
+
+      .highcharts-credits {
+        display: none;
+      }
+    }
+
+    .donutpie-2 {
+      @include mobile{
+        height: 350px;
+      }
+      .highcharts-title {
+        display: none;
+      }
+
+      .highcharts-exporting-group {
+        display: none;
+      }
+
+      .highcharts-background {
+        fill: transparent;
+      }
+
+      .highcharts-data-label-color-0 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-1 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-2 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-color-3 {
+        text {
+          font-size: 12px;
+          font-weight: 500;
+          fill: #fff !important;
+
+          tspan {
+            stroke: none;
+          }
+        }
+      }
+
+      .highcharts-data-label-connector {
+        display: none;
+      }
+
+      .highcharts-color-0 {
+        fill: #FF8D3D;
+        stroke: none;
+      }
+
+      .highcharts-color-1 {
+        fill: #FAB655;
+        stroke: none;
+      }
+
+      .highcharts-color-2 {
+        fill: #F75F28;
+        stroke: none;
+      }
+
+      .highcharts-color-3 {
+        fill: #F9794D;
+        stroke: none;
+      }
+
+      .highcharts-credits {
+        display: none;
+      }
+    }
+  }
+
+  .child-index {
+    background: $light-blue;
+
+    .child-index-text {
+      width: 90%;
+      @include mobile {
+        width: 100%;
+      }
+      @include tablet {
+        width: 100%;
+      }
+    }
+
+    .highcharts-background {
+      fill: $light-blue;
+    }
+
+    .highcharts-exporting-group {
+      display: none;
+    }
+
+    .highcharts-title {
+      display: none;
+    }
+
+    .highcharts-subtitle {
+      display: none;
+    }
+
+    .highcharts-yaxis {
+      display: none;
+    }
+
+    .highcharts-credits {
+      display: none;
+    }
+
+    .highcharts-color-0 {
+      fill: #83337A;
+      cursor: pointer;
+    }
+
+    .highcharts-color-1 {
+      fill: #A34CB7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-2 {
+      fill: #FF8D3D;
+      cursor: pointer;
+    }
+
+    .highcharts-color-3 {
+      fill: #8E85E7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-4 {
+      fill: #5260A6;
+      cursor: pointer;
+    }
+
+    .highcharts-color-5 {
+      fill: #FA6F3F;
+      cursor: pointer;
+    }
+
+    .highcharts-color-6 {
+      fill: #FEBC5E;
+      cursor: pointer;
+    }
+
+    .highcharts-yaxis-grid {
+      .highcharts-grid-line {
+        stroke: #ffffff;
+      }
+    }
+
+    .highcharts-axis-line {
+      stroke: #ffffff;
+    }
+
+    .highcharts-data-label-color-0 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-1 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-2 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-3 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-4 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-5 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-6 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-xaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-yaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+  }
+
+  .social-index {
+    .social-index-text {
+      width: 90%;
+      @include mobile {
+        width: 100%;
+      }
+    }
+
+    .highcharts-background {
+      fill: $light-orange;
+    }
+
+    .highcharts-exporting-group {
+      display: none;
+    }
+
+    .highcharts-title {
+      display: none;
+    }
+
+    .highcharts-subtitle {
+      display: none;
+    }
+
+    .highcharts-yaxis {
+      display: none;
+    }
+
+    .highcharts-credits {
+      display: none;
+    }
+
+    .highcharts-color-0 {
+      fill: #A34CB7;
+      cursor: pointer;
+    }
+
+    .highcharts-color-1 {
+      fill: #FF8D3D;
+      cursor: pointer;
+    }
+
+    .highcharts-color-2 {
+      fill: #5260A6;
+      cursor: pointer;
+    }
+
+    .highcharts-yaxis-grid {
+      .highcharts-grid-line {
+        stroke: #DEDEDE;
+      }
+    }
+
+    .highcharts-axis-line {
+      stroke: #DEDEDE;
+    }
+
+    .highcharts-data-label-color-0 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-1 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-data-label-color-2 {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-xaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+
+    .highcharts-yaxis-labels {
+      text {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+        color: #6d6d6d !important;
+        fill: #6d6d6d !important;
+        font-family: $font-source;
+      }
+    }
+  }
+  .select-zone {
+    position: relative;
+    @include mobile {
+      padding-bottom: 2rem;
+      margin-top: 1rem;
+    }
+    @include tablet {
+      padding-bottom: 2rem;
+      margin-top: 1.5rem;
+    }
+
+    .zone {
+      height: 2rem;
+      -webkit-appearance: none;
+      padding: 0 2rem 0 0.8rem;
+      border-radius: 1em;
+      background: #ffffff;
+      color: $orange;
+      border: 1px solid $orange;
+      font-size: 0.875rem;
+      font-family: $font-noto;
+      letter-spacing: 0.17px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    &::after {
+      content: "\f0d7";
+      position: absolute;
+      font-family: "fontAwesome";
+      top: 50%;
+      right: 5%;
+      color: $orange;
+      transform: translate(-5%, -145%);
+      @include mobile {
+        top: 50%;
+        right: 5%;
+        transform: translate(-5%, -115%);
+      }
+      @include tablet {
+        top: 50%;
+        right: 5%;
+        transform: translate(-5%, -120%);
+      }
+    }
+  }
+  #school-compare-cta{
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+    visibility: hidden;
+    box-shadow: 0 3px 8px 0 rgba(73, 73, 73, 0.6);
+  }
+}

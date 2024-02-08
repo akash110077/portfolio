@@ -1,0 +1,211 @@
+.payment {
+  .shipping-payment {
+    .des-shipping {
+      @include mobile {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+    }
+
+    .mob-shipping {
+      display: none;
+      @include mobile {
+        display: block;
+      }
+      @include tablet {
+        display: block;
+      }
+    }
+
+    #vertical_tab_nav {
+      border: 1px solid #d8d8d8;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      overflow: hidden;
+      border-radius: 14px;
+
+      ul {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;
+        width: 35%;
+
+        li {
+          text-align: left;
+          padding: 0;
+
+          &:first-child {
+            a {
+              border-top: none;
+            }
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+
+          &:hover {
+            text-align: left;
+          }
+
+          a {
+            display: block;
+            font-size: 1rem;
+            color: $black;
+            text-decoration: none;
+            padding: 0 2rem;
+            height: 60px;
+            background: #f9f9f9;
+            padding: 0 2rem;
+            border-top: 1px solid #d8d8d8;
+            border-right: 1px solid #d8d8d8;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            letter-spacing: 0.3px;
+            border-left: 4px solid transparent;
+          }
+        }
+      }
+    }
+
+    #vertical_tab_nav li a.selected {
+      border-right: 0;
+      background: white;
+      color: $orange;
+      border-left: 4px solid;
+    }
+
+    #vertical_tab_nav .vertical_tab_content {
+      display: block;
+      float: left;
+      background: white;
+      width: 65%;
+      padding: 3%;
+      border-radius: 0 10px 10px 0;
+    }
+
+    #vertical_tab_nav .vertical_tab_content article {
+      display: none;
+      margin: 0;
+    }
+
+    #vertical_tab_nav .vertical_tab_content article p {
+      margin: 0 0 20px;
+    }
+
+    .vertical_tab_content {
+      h3 {
+        font-size: 1rem;
+        font-weight: 400;
+        color: $black;
+        text-align: left;
+        line-height: 22px;
+      }
+    }
+
+    .cheque {
+      .mail-add {
+        font-size: 1rem;
+        color: $black;
+        line-height: 22px;
+        text-align: left;
+        font-weight: 500 !important;
+      }
+    }
+    // code for collapsible
+    #accordion {
+      .active {
+        background: $white !important;
+      }
+
+      .mob-payment {
+        border-top: 0;
+        border-bottom: 0;
+
+        &:first-child {
+          border-top: 1px solid rgba(0,0,0,.125);
+        }
+      }
+
+      .card-header {
+        background: #f9f9f9;
+      }
+    }
+
+    .pay-dropdown {
+      margin-bottom: 0;
+
+      label {
+        h4 {
+          color: $black;
+          font-size: 1rem;
+          font-weight: 500;
+          letter-spacing: 0.3px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .pay-dropdown > label > a {
+      display: block;
+      position: relative;
+    }
+
+    .pay-dropdown > label > a:after {
+      /* fa-chevron-down */
+      content: "\f078";
+      color: $orange;
+      font-family: 'FontAwesome';
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translate(-50%, -50%);
+    }
+
+    .pay-dropdown > label > a[aria-expanded="true"]:after {
+      content: "\f077";
+      /* fa-chevron-up */
+    }
+  }
+  // books
+  .books {
+    a {
+      text-decoration: none;
+    }
+
+    &:before {
+      width: 0;
+    }
+
+    .card {
+      width: 21%;
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include mobile {
+        width: 90%;
+      }
+
+      .card-image {
+        img {
+          height: 22rem;
+          object-fit: cover;
+        }
+      }
+
+      .card-body {
+        background: #f9f9f9;
+      }
+    }
+  }
+}

@@ -1,0 +1,474 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Helvetica';
+  background-color: #FAFAFA;
+  letter-spacing: 0.43px;
+
+  .container {
+    max-width: 960px;
+    padding-bottom: 4rem;
+    @include mobile {
+      max-width: 100%;
+      padding-bottom: 2rem;
+    }
+    @include tablet {
+      max-width: 100%;
+    }
+
+    .row {
+      @include mobile {
+        margin: 0;
+      }
+      @include tablet {
+        margin: 0;
+      }
+    }
+  }
+
+  .sub-text {
+    font-size: 0.875rem;
+    padding-top: 1rem;
+    @include mobile {
+      font-size: 0.75rem;
+      padding-top: 0.5rem;
+    }
+  }
+
+  .para-link {
+    color: $orange;
+    cursor: pointer;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .orange-text {
+    color: $orange !important;
+  }
+
+  .checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    @include mobile {
+      padding-left: 20px;
+    }
+  }
+  /* Hide the browser's default checkbox */
+  .checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    @include mobile {
+      width: 0 !important;
+    }
+  }
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 14px;
+    width: 14px;
+    // background-color: white;
+    box-shadow: 0 2px 5px 0 rgba(113,113,113,0.24);
+    -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.24);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.24);
+    border-radius: 2px;
+    background-color: #f7f7f7;
+    @include mobile {
+      left: 0;
+      height: 14px;
+      width: 14px;
+    }
+  }
+  /* On mouse-over, add a grey background color */
+  .checkbox-label:hover input ~ .checkmark {
+    background-color: $blue;
+    @include mobile {
+      background-color: #f7f7f7;
+    }
+    @include tablet {
+      background-color: #f7f7f7;
+    }
+  }
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-label input:checked ~ .checkmark {
+    background-color: $blue;
+  }
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  /* Show the checkmark when checked */
+  .checkbox-label input:checked ~ .checkmark:after {
+    display: block;
+  }
+  /* Style the checkmark/indicator */
+  .checkbox-label .checkmark:after {
+    left: 4px;
+    top: 0;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    @include mobile {
+      left: 4px;
+      top: 0;
+    }
+  }
+
+  .orange-heading {
+    color: $orange !important;
+    font-size: 24px !important;
+    font-weight: bold !important;
+  }
+
+  .blue-text {
+    color: $dark-blue;
+  }
+
+  .black-text {
+    color: #4A4A4A;
+    font-size: 14px;
+    letter-spacing: 0.43px;
+  }
+
+  .font-small {
+    font-size: 12px;
+  }
+
+  .gray-text {
+    color: #827F7F;
+    font-size: 10px;
+  }
+  $color: #4A4A4A;
+  $timing: 0.3s;
+
+  .dropdown-el {
+    min-width: auto;
+    position: absolute;
+    display: inline-block;
+    margin-right: 1em;
+    min-height: 36px;
+    max-height: 36px;
+    overflow: hidden;
+    top: 1.6rem;
+    left: 0;
+    z-index: 99;
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    color: #444;
+    outline: none;
+    transition: 0.0s all ease-in-out;
+    @include mobile {
+      min-height: 36px;
+      max-height: 36px;
+      top: 1.6rem;
+    }
+    @include tablet {
+      min-height: 36px;
+      max-height: 36px;
+    }
+
+    &::after {
+      background-image: url("../../img/dropdown.png");
+      content: "";
+      position: absolute;
+      right: 0.5em;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+      top: 1em;
+      transition: 0.4s all ease-in-out;
+      background-size: 9px 5px;
+      @include mobile {
+        background-size: 10px 7px;
+        top: 1em;
+      }
+      @include tablet {
+        background-size: 10px 7px;
+        top: 1em;
+      }
+    }
+
+    &.expanded {
+      background: #fff;
+      border-radius: 0.25em;
+      padding: 0;
+      z-index: 999;
+      box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0;
+      -moz-box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 5px 0;
+      max-height: 22em;
+
+      label {
+        border-top: 1px solid #eaeaea;
+
+        &:hover {
+          color: $color;
+        }
+      }
+
+      input:checked + label {
+        color: $color;
+      }
+
+      &::after {
+        transform: rotate(-180deg);
+        top: 0.8em;
+      }
+    }
+
+    input {
+      display: none;
+    }
+
+    label {
+      border-top: 1px solid #D8D8D8;
+      display: block;
+      height: 2em;
+      line-height: 2em;
+      padding-left: 1em;
+      padding-right: 3em;
+      cursor: pointer;
+      position: relative;
+      transition: $timing color ease-in-out;
+      @include mobile {
+        border-top: none;
+      }
+      @include tablet {
+        border-top: none;
+      }
+
+      &:nth-child(2) {
+        margin-top: 3em;
+        border-top: 1px solid #D8D8D8;
+        @include mobile {
+          border-top: none;
+        }
+        @include tablet {
+          border-top: none;
+        }
+      }
+    }
+
+    input:checked + label {
+      display: block;
+      border-top: none;
+      position: absolute;
+      top: 2px;
+
+      &:nth-child(2) {
+        margin-top: 0;
+        position: relative;
+        @include mobile {
+          margin: 5px 0;
+        }
+        @include tablet {
+          margin: 5px 0;
+        }
+      }
+    }
+  }
+
+  .dropdown {
+    box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    -moz-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(113,113,113,0.39);
+    border-radius: 5px;
+    background: white;
+    @include mobile {
+      width: 100%;
+    }
+    @include tablet {
+      width: 8rem;
+    }
+
+    .btn {
+      background: white;
+      border: none;
+      height: 1.9rem;
+      color: #4A4A4A;
+      font-size: 0.75rem;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    label {
+      font-size: 12px;
+      margin-bottom: 0;
+      color: #194D7D;
+      height: 36px;
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      @include mobile {
+        height: auto;
+      }
+      @include tablet {
+        height: auto;
+      }
+
+      &:hover {
+        background: #f1f1f1;
+      }
+
+      &:active {
+        background: #f1f1f1;
+      }
+
+      &:focus {
+        background: #f1f1f1;
+      }
+    }
+
+    input:checked + label {
+      color: #4A4A4A;
+      padding-top: 4px;
+      @include mobile {
+        margin: 5px 0;
+        padding-top: 0;
+      }
+      @include tablet {
+        margin: 5px 0;
+        padding-top: 0;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+  }
+
+  .dropdown-el-debit {
+    width: 13rem;
+  }
+  /// datepicker ////
+  .datepicker table tr td.today {
+    background-color: #FEF5EF !important;
+    background-image: none !important;
+  }
+
+  .datepicker table tr td.active.active {
+    background-color: $orange !important;
+    background-image: none !important;
+  }
+
+  .datepicker-dropdown.datepicker-orient-left:before {
+    @include mobile {
+      left: inherit !important;
+    }
+    @media screen and (max-width: 750px) and (min-width: 400px) {
+      left: 15px !important;
+    }
+  }
+
+  .datepicker-dropdown.datepicker-orient-left:after {
+    @include mobile {
+      left: inherit !important;
+    }
+    @media screen and (max-width: 750px) and (min-width: 400px) {
+      left: 15px !important;
+    }
+  }
+
+  .datepicker.dropdown-menu {
+    z-index: 9999999 !important;
+  }
+
+  .datepicker thead tr .next,
+  .datepicker thead tr .prev {
+    font-size: 20px;
+  }
+
+  .information {
+    color: #827F7F;
+    font-size: 10px;
+    letter-spacing: 0.36px;
+    padding: 1rem 0;
+    border-top: 1px solid #D8D8D8;
+    margin-bottom: 0;
+    @include mobile {
+      padding: 1.5rem 0 1rem;
+    }
+  }
+
+  .mob-border-bottom {
+    border-bottom: none;
+    @include mobile {
+      border-bottom: 1px solid #D8D8D8;
+    }
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #D8D8D8;
+    @include mobile {
+      border-bottom: none;
+    }
+  }
+
+  .border-top {
+    border-top: 1px solid #D8D8D8;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .font-14 {
+    font-size: 0.87rem;
+  }
+
+  .font-12 {
+    font-size: 0.75rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    @include mobile {
+      margin-right: 0;
+    }
+    @include tablet {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.label-text {
+  color: $dark-blue;
+  font-size: 12px;
+  letter-spacing: 0.43px;
+  display: flex;
+  justify-content: space-between;
+
+  img {
+    width: 0.75rem;
+  }
+}
